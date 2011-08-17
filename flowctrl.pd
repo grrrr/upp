@@ -1,0 +1,31 @@
+#N canvas 136 92 385 333 10;
+#X obj 68 27 inlet;
+#X obj 69 274 outlet;
+#X text 68 294 pass on;
+#X obj 239 26 loadbang;
+#X msg 239 60 0;
+#X obj 50 95 cnv 15 200 130 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 164 168 if busy;
+#X text 62 169 if vacant;
+#X obj 190 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 207 113 busy;
+#X obj 189 273 outlet;
+#X obj 318 26 inlet;
+#X msg 263 151 1;
+#X obj 188 246 t a b;
+#X text 262 134 set busy;
+#X text 191 292 to worker;
+#X text 119 27 message in;
+#X obj 117 149 dilemma;
+#X connect 0 0 17 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 8 0 17 1;
+#X connect 11 0 4 0;
+#X connect 12 0 8 0;
+#X connect 13 0 10 0;
+#X connect 13 1 12 0;
+#X connect 17 0 13 0;
+#X connect 17 1 1 0;

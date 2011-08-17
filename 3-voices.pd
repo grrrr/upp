@@ -1,0 +1,42 @@
+#N canvas 95 306 504 392 10;
+#X floatatom 71 80 5 0 0 0 - - -;
+#X obj 71 49 kbd;
+#X obj 271 266 *~ 0;
+#X obj 329 246 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9300 1;
+#X obj 326 266 dbtopow;
+#X obj 271 307 dac~;
+#X text 127 52 keyboard;
+#X text 390 266 gain (dB);
+#X text 322 308 audio out;
+#X obj 54 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 125 80 MIDI note;
+#X obj 70 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 87 311 overflow;
+#X obj 271 213 catch~ bus;
+#X obj 71 116 voice-mono bus note_alt;
+#X obj 71 138 voice-mono bus note_alt;
+#X obj 71 160 voice-mono bus note_alt;
+#X obj 71 182 voice-mono bus note_alt;
+#X obj 71 204 voice-mono bus note_alt;
+#X obj 71 226 voice-mono bus note_alt;
+#X obj 71 248 voice-mono bus note_alt;
+#X obj 71 270 voice-mono bus note_alt;
+#X connect 0 0 14 0;
+#X connect 1 0 9 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 11 0;

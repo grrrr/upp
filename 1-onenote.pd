@@ -1,0 +1,45 @@
+#N canvas 89 40 551 437 10;
+#X floatatom 71 98 5 0 0 0 - - -;
+#X obj 71 73 kbd;
+#X obj 72 349 *~ 0;
+#X obj 130 329 hsl 128 15 0 127 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 8600 1;
+#X obj 127 349 dbtopow;
+#X obj 72 390 dac~;
+#X text 191 349 gain (dB);
+#X text 123 391 audio out;
+#X obj 27 135 cnv 15 250 170 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 72 224 osc~;
+#X obj 72 274 *~;
+#X obj 141 224 vline~;
+#X obj 72 148 t a b;
+#X text 146 183 attack+decay;
+#X text 144 242 volume envelope;
+#X text 34 225 sine;
+#X text 287 204 boxed part can go into abstraction;
+#X obj 54 97 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 73 199 mtof;
+#X text 125 97 MIDI note;
+#X text 374 220 note_basic;
+#X msg 140 200 1 20 \, 0 800 20;
+#X text 127 73 computer keyboard (middle rows);
+#X obj 27 11 cnv 15 500 40 empty empty Monophonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 34 32 can play only one note at a time;
+#X text 414 14 grrrr.org \, 2011;
+#X connect 0 0 12 0;
+#X connect 1 0 17 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 11 0 10 1;
+#X connect 12 0 18 0;
+#X connect 12 1 21 0;
+#X connect 18 0 9 0;
+#X connect 21 0 11 0;
