@@ -1,42 +1,46 @@
-#N canvas 95 306 504 392 10;
-#X floatatom 71 80 5 0 0 0 - - -;
-#X obj 71 49 kbd;
-#X obj 271 266 *~ 0;
-#X obj 329 246 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9300 1;
-#X obj 326 266 dbtopow;
-#X obj 271 307 dac~;
-#X text 127 52 keyboard;
-#X text 390 266 gain (dB);
-#X text 322 308 audio out;
-#X obj 54 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 125 80 MIDI note;
-#X obj 70 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 87 311 overflow;
-#X obj 271 213 catch~ bus;
-#X obj 71 116 voice-mono bus note_alt;
-#X obj 71 138 voice-mono bus note_alt;
-#X obj 71 160 voice-mono bus note_alt;
-#X obj 71 182 voice-mono bus note_alt;
-#X obj 71 204 voice-mono bus note_alt;
-#X obj 71 226 voice-mono bus note_alt;
-#X obj 71 248 voice-mono bus note_alt;
-#X obj 71 270 voice-mono bus note_alt;
-#X connect 0 0 14 0;
-#X connect 1 0 9 0;
-#X connect 1 0 0 0;
+#N canvas 95 306 557 463 10;
+#X floatatom 53 169 5 0 0 0 - - -;
+#X obj 53 91 kbd;
+#X obj 309 361 *~ 0;
+#X obj 367 341 hsl 128 15 0 127 0 0 empty empty gain(dB) -2 -8 0 10
+-204786 -1 -1 8500 1;
+#X obj 364 361 dbtopow;
+#X obj 309 402 dac~;
+#X text 360 403 audio out;
+#X text 94 170 MIDI note;
+#X obj 53 404 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
+#X obj 309 308 catch~ bus;
+#X obj 53 212 voice-mono bus note_alt;
+#X obj 53 234 voice-mono bus note_alt;
+#X obj 53 256 voice-mono bus note_alt;
+#X obj 53 278 voice-mono bus note_alt;
+#X obj 53 300 voice-mono bus note_alt;
+#X obj 53 322 voice-mono bus note_alt;
+#X obj 53 344 voice-mono bus note_alt;
+#X obj 53 366 voice-mono bus note_alt;
+#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 414 14 grrrr.org \, 2011;
+#X obj 53 126 unpack;
+#X obj 53 145 spigot;
+#X text 34 34 encapsulating abstractions into daisy-chained voices
+;
+#X connect 0 0 10 0;
+#X connect 1 0 20 0;
 #X connect 2 0 5 0;
 #X connect 2 0 5 1;
 #X connect 3 0 4 0;
 #X connect 4 0 2 1;
-#X connect 13 0 2 0;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 18 0 19 0;
-#X connect 19 0 20 0;
+#X connect 17 0 8 0;
 #X connect 20 0 21 0;
-#X connect 21 0 11 0;
+#X connect 20 1 21 1;
+#X connect 21 0 0 0;
