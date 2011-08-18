@@ -26,7 +26,7 @@
 #X obj 585 168 t a;
 #X msg 564 119 -1;
 #X obj 551 205 nbx 5 14 -1e+37 1e+37 0 0 empty empty active 0 -8 0
-10 -262144 -1 -1 1 256;
+10 -262144 -1 -1 0 256;
 #X text 413 23 modulation message;
 #X obj 68 216 t a b;
 #X msg 529 120 1;
@@ -43,6 +43,7 @@
 #X obj 551 167 +;
 #X obj 551 556 outlet;
 #X text 548 577 voices active;
+#X text 67 20 event message;
 #X connect 0 0 19 0;
 #X connect 1 0 2 0;
 #X connect 1 1 14 0;

@@ -1,9 +1,9 @@
-#N canvas 681 237 588 423 10;
+#N canvas 480 61 588 423 10;
 #X floatatom 54 130 5 0 0 0 - - -;
 #X obj 54 27 kbd;
 #X obj 351 328 *~ 0;
 #X obj 409 308 hsl 128 15 0 127 0 0 empty empty gain(dB) -2 -8 0 10
--204786 -1 -1 9000 1;
+-204786 -1 -1 10500 1;
 #X obj 406 328 dbtopow;
 #X obj 351 369 dac~;
 #X text 402 370 audio out;

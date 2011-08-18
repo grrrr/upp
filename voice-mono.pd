@@ -16,6 +16,8 @@
 #X msg 366 102 0;
 #X obj 385 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 290 20 inlet;
+#X text 287 37 dummy;
 #X connect 0 0 2 0;
 #X connect 0 1 5 0;
 #X connect 1 0 0 0;

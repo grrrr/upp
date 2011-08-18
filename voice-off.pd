@@ -1,4 +1,4 @@
-#N canvas 304 392 494 255 10;
+#N canvas 122 634 494 255 10;
 #X obj 39 118 flowctrl;
 #X obj 39 23 inlet;
 #X obj 39 195 outlet;
@@ -9,7 +9,7 @@
 #X msg 366 137 0;
 #X obj 385 162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 365 24 loadbang;
+#X obj 366 19 loadbang;
 #X text 38 211 pass;
 #X obj 144 86 list split 1;
 #N canvas 359 418 465 379 check 0;
@@ -33,12 +33,13 @@
 #X connect 7 0 2 0;
 #X connect 9 0 6 0;
 #X restore 291 84 pd check;
-#X obj 306 54 spigot;
-#X obj 307 24 inlet;
+#X obj 306 41 spigot;
+#X obj 306 20 inlet;
 #X text 140 211 release;
 #X obj 143 111 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
 #X obj 246 194 outlet;
 #X text 245 213 active;
+#X obj 306 60 t a a;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
 #X connect 1 0 0 0;
@@ -53,8 +54,9 @@
 #X connect 11 0 12 1;
 #X connect 11 1 16 0;
 #X connect 12 0 16 1;
-#X connect 13 0 12 0;
+#X connect 13 0 19 0;
 #X connect 14 0 13 0;
 #X connect 16 0 0 1;
 #X connect 16 0 7 0;
 #X connect 16 0 3 0;
+#X connect 19 0 12 0;
