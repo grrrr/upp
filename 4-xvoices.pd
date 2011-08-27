@@ -9,8 +9,8 @@
 #X obj 66 143 spigot;
 #X obj 66 85 kbd;
 #X obj 329 110 out-mono;
-#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
--233017 -66577 0;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
 #X text 414 14 grrrr.org \, 2011;
 #X text 34 34 playing notes with a formant-defined timbre;
 #N canvas 812 212 637 584 timbre 0;
@@ -97,9 +97,9 @@
 #X text 50 258 ^;
 #X text 50 263 |;
 #X text 50 276 |;
-#X floatatom 329 458 5 0 0 0 voices_active - -;
+#X floatatom 322 458 5 0 0 0 voices_active - -;
 #X obj 329 86 catch~ \$0-bus;
-#X obj 66 432 x11 x10 voice-mono \$0-bus note_alt_vol;
+#X obj 66 432 x11 x10 voice-bus \$0-bus note_alt_vol;
 #X connect 0 0 3 0;
 #X connect 3 0 12 0;
 #X connect 5 0 6 0;

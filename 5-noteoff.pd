@@ -11,7 +11,7 @@
 #X obj 104 142 == 0;
 #X floatatom 233 636 5 0 0 0 voices_active - -;
 #X obj 344 115 out-mono;
-#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player 10 10 0 14
 -233017 -66577 0;
 #X text 414 14 grrrr.org \, 2011;
 #X text 34 34 playing notes with note-dependent timbre and decay;

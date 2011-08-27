@@ -23,7 +23,7 @@
 #X obj 89 374 nbx 5 14 -1e+37 1e+37 0 0 empty empty note 0 -8 0 10
 -262144 -1 -1 3 256;
 #X obj 150 375 nbx 5 14 -1e+37 1e+37 0 0 empty empty octave 0 -8 0
-10 -262144 -1 -1 4 256;
+10 -262144 -1 -1 9 256;
 #X obj 425 85 inlet;
 #X obj 425 106 list trim;
 #X obj 426 124 list prepend symbol;
@@ -233,10 +233,10 @@ let pass unfiltered key-downs to avoid unnecessary latency.;
 #X obj 341 297 loadbang;
 #X msg 341 319 5;
 #X text 371 321 default octave;
-#X obj 372 501 nbx 2 14 -3 9 0 0 empty empty empty 0 -8 0 9 -262144
--1 -1 2 256;
-#X obj 338 517 hradio 15 1 0 4 empty empty EN_DE_FR_ES 3 10 0 8 -262144
--258113 -1 1;
+#X obj 372 518 nbx 2 14 -3 9 0 0 empty empty empty 0 -8 0 9 -262144
+-1 -1 7 256;
+#X obj 337 500 hradio 15 1 0 4 empty empty EN_DE_FR_ES 3 10 0 8 -262144
+-258113 -1 0;
 #X obj 237 541 route 0 1 2 3;
 #X text 34 32 play MIDI notes with octave shift and inhibited repetition
 ;
@@ -244,10 +244,10 @@ let pass unfiltered key-downs to avoid unnecessary latency.;
 #X msg 303 251 list a w s e d f g y h u j k o l p ñ;
 #X text 34 53 Caution: there are key (chord) combinations \, that are
 not possible \, e.g. a-d-k simultaneously on the US keyboard.;
-#X obj 337 501 cnv 5 40 15 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 337 517 cnv 5 40 15 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X symbolatom 348 502 4 0 0 0 - - -;
-#X obj 338 503 bng 10 250 50 0 empty empty empty 17 7 0 10 -262144
+#X symbolatom 348 519 4 0 0 0 - - -;
+#X obj 338 520 bng 10 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 372 447 - 2;
 #X connect 0 0 11 0;
