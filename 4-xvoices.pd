@@ -1,41 +1,42 @@
-#N canvas 57 581 542 280 10;
-#X floatatom 71 109 5 0 0 0 - - -;
-#X obj 307 111 *~ 0;
-#X obj 365 91 hsl 128 15 0 127 0 0 empty empty gain(dB) -2 -8 0 10
--204786 -1 -1 8000 1;
-#X obj 362 111 dbtopow;
-#X obj 307 152 dac~;
-#X text 358 153 audio out;
-#X text 125 109 MIDI note;
-#X obj 71 238 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+#N canvas 72 68 549 526 10;
+#X floatatom 66 169 5 0 0 1 MIDI_note - -;
+#X obj 66 459 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X obj 307 58 catch~ bus;
-#X text 145 145 partials;
-#N canvas 112 75 750 604 timbre 0;
+#X text 140 205 partials;
+#X obj 66 204 pack 0 8;
+#X text 70 401 midinote volume;
+#X obj 66 123 unpack;
+#X obj 66 143 spigot;
+#X obj 66 85 kbd;
+#X obj 329 110 out-mono;
+#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 414 14 grrrr.org \, 2011;
+#X text 34 34 playing notes with a formant-defined timbre;
+#N canvas 812 212 637 584 timbre 0;
 #X obj 90 28 inlet;
 #X obj 82 538 outlet;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array formant 150 float 1;
-#A 0 63.3924 63.7495 63.7495 64.1067 64.821 66.2496 67.321 68.0353
-69.1068 69.1068 69.8211 70.1782 71.2496 71.9639 72.6782 73.3925 73.9282
-74.464 74.8211 75.1783 75.5354 76.2497 76.6068 77.6783 81.2498 81.9641
-81.9641 82.3212 82.6784 82.6784 83.0355 83.0355 83.0355 83.0355 83.0355
-83.3926 83.3926 83.3926 83.3926 83.3926 83.3926 83.0355 83.0355 82.6784
-82.6784 83.0355 84.1069 86.2498 86.9641 88.3927 88.7499 89.4641 90.8927
-92.3213 91.2499 90.5356 90.1784 89.107 90.1784 91.9642 93.0356 93.3928
-93.3928 90.5356 90.1784 90.1784 90.5356 92.3213 93.3928 93.3928 93.3928
-93.0356 90.1784 90.1784 90.1784 90.1784 86.9641 86.2498 86.2498 83.3926
-82.6784 82.3212 81.9641 81.6069 81.2498 81.0712 80.8926 80.8926 80.8926
-80.8926 81.2498 81.6069 81.9641 83.0355 84.1069 85.1784 85.1784 85.1784
-85.1784 85.1784 85.1784 84.8212 81.9641 81.9641 81.6069 81.2498 77.6783
-77.6783 77.3211 76.964 76.6068 75.8926 74.1068 72.3211 71.6068 71.2496
-71.2496 71.2496 71.2496 70.5353 70.3568 70.1782 69.1068 68.7496 68.0353
-67.321 66.7853 66.2496 65.7139 65.1781 64.1067 63.571 63.0353 62.321
-61.6067 61.0709 60.5352 59.8209 59.2852 58.7495 58.3923 58.0352 57.678
-56.9638 56.6066 55.8923 55.8923 55.178 55.178 55.178;
-#X coords 0 100 149 50 400 140 1;
-#X restore 310 34 graph;
-#X obj 115 425 tabread formant;
+#X array timbre 150 float 1;
+#A 0 87.6777 88.9635 89.6064 90.035 90.2493 90.8921 91.9636 92.6065
+90.6779 90.8921 91.1064 91.3207 91.535 91.6064 91.6778 91.7493 91.7493
+91.8564 91.9635 91.9635 92.1778 92.6064 93.0349 93.0349 89.1779 89.3922
+89.8207 91.535 93.0349 93.2492 93.0349 92.6064 89.8207 88.9636 88.1065
+87.2494 86.3923 85.9637 85.9637 85.9637 85.9637 85.9637 86.178 86.3923
+86.6066 86.8208 87.0351 87.3029 87.5708 87.8386 88.1065 88.3743 88.6422
+88.91 89.1779 89.484 89.7901 90.0962 90.4024 90.7085 91.0146 91.3207
+89.3922 89.6065 90.4636 91.3207 91.535 92.8206 92.1778 92.1778 92.1778
+92.1778 92.1778 92.3064 92.4349 92.5635 92.6921 92.3921 92.3921 92.6064
+92.8206 93.2492 93.6778 94.642 95.6063 95.6063 92.8206 90.6779 90.4636
+90.6064 90.7493 90.8921 91.3207 92.1778 88.5351 88.5351 88.5351 88.3208
+88.2136 88.1065 87.7851 87.4637 87.0351 86.6066 85.5352 85.5352 85.7494
+86.3923 86.8208 86.9637 87.1065 87.2494 87.2494 87.2494 87.6779 88.5351
+88.9636 89.9279 90.8921 91.7493 85.1066 84.4638 84.4638 83.8209 83.8209
+83.6066 83.6066 83.5352 83.4638 83.3924 83.3924 83.3209 83.2495 83.1781
+83.1781 83.1781 84.0352 84.678 85.3209 85.9637 86.6066 87.2494 87.8922
+88.5351 88.8208 89.1065 89.3922 89.9279 90.4636 90.6779;
+#X coords 0 100 149 70 300 140 1;
+#X restore 280 35 graph;
 #X floatatom 53 137 5 0 0 0 - - -;
 #X floatatom 171 135 5 0 0 0 - - -;
 #X obj 54 247 until;
@@ -49,12 +50,10 @@
 #X obj 83 399 t a a;
 #X obj 83 511 pack;
 #X obj 115 448 dbtopow;
-#X msg 309 215 \; formant const 80;
 #X obj 91 61 unpack;
 #X text 171 116 partials;
-#X text 254 35 dB;
-#X text 253 52 50..100;
-#X text 589 177 MIDI note 0...150;
+#X text 223 35 dB;
+#X text 458 178 MIDI note 0...150;
 #X text 116 281 count partials;
 #X text 49 346 partial frequencies;
 #X text 226 424 fetch gain from table;
@@ -62,46 +61,52 @@
 #X text 24 117 fundamental frq;
 #X obj 83 372 ftom;
 #X text 45 491 midinote volume;
-#X connect 0 0 18 0;
-#X connect 3 0 16 0;
-#X connect 4 0 11 0;
-#X connect 5 0 7 1;
-#X connect 6 0 9 0;
-#X connect 7 0 8 0;
-#X connect 8 0 6 0;
-#X connect 8 1 13 0;
-#X connect 9 0 10 0;
-#X connect 9 0 12 0;
-#X connect 10 0 9 1;
-#X connect 11 0 7 0;
-#X connect 11 1 12 1;
-#X connect 12 0 28 0;
-#X connect 13 0 9 1;
-#X connect 14 0 15 0;
-#X connect 14 1 3 0;
-#X connect 15 0 1 0;
-#X connect 16 0 15 1;
-#X connect 18 0 26 0;
-#X connect 18 1 5 0;
-#X connect 26 0 4 0;
-#X connect 28 0 14 0;
-#X restore 71 166 pd timbre;
-#X obj 71 144 pack 0 8;
-#X text 74 192 midinote volume;
-#X obj 71 211 x11 x10 voice-mono bus note_alt;
-#X obj 71 63 unpack;
-#X obj 71 83 spigot;
-#X obj 71 25 kbd;
-#X connect 0 0 11 0;
-#X connect 1 0 4 0;
-#X connect 1 0 4 1;
-#X connect 2 0 3 0;
-#X connect 3 0 1 1;
-#X connect 8 0 1 0;
-#X connect 10 0 13 0;
-#X connect 11 0 10 0;
-#X connect 13 0 7 0;
-#X connect 14 0 15 0;
-#X connect 14 1 15 1;
-#X connect 15 0 0 0;
-#X connect 16 0 14 0;
+#X obj 115 425 tabread timbre;
+#X msg 469 222 \; timbre const 80;
+#X obj 565 20 bng 15 250 50 0 empty empty clear -35 7 0 10 -204786
+-1 -1;
+#X text 222 52 70..100;
+#X connect 0 0 16 0;
+#X connect 3 0 10 0;
+#X connect 4 0 6 1;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 7 1 12 0;
+#X connect 8 0 9 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 1;
+#X connect 10 0 6 0;
+#X connect 10 1 11 1;
+#X connect 11 0 25 0;
+#X connect 12 0 8 1;
+#X connect 13 0 14 0;
+#X connect 13 1 27 0;
+#X connect 14 0 1 0;
+#X connect 15 0 14 1;
+#X connect 16 0 23 0;
+#X connect 16 1 4 0;
+#X connect 23 0 3 0;
+#X connect 25 0 13 0;
+#X connect 27 0 15 0;
+#X connect 29 0 28 0;
+#X coords 0 -1 1 1 300 155 2 280 20;
+#X restore 66 229 pd timbre;
+#X text 267 387 ---> frequency;
+#X text 32 245 gain;
+#X text 50 258 ^;
+#X text 50 263 |;
+#X text 50 276 |;
+#X floatatom 329 458 5 0 0 0 voices_active - -;
+#X obj 329 86 catch~ \$0-bus;
+#X obj 66 432 x11 x10 voice-mono \$0-bus note_alt_vol;
+#X connect 0 0 3 0;
+#X connect 3 0 12 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 6 0 0 0;
+#X connect 7 0 5 0;
+#X connect 12 0 20 0;
+#X connect 19 0 8 0;
+#X connect 20 0 1 0;
+#X connect 20 2 18 0;

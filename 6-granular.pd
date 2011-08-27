@@ -1,83 +1,37 @@
-#N canvas 538 253 655 452 10;
-#X obj 412 343 *~ 0;
-#X obj 470 323 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+#N canvas 55 59 668 428 10;
+#X obj 39 385 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
+#X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
 -1 -1 0 1;
-#X obj 467 343 dbtopow;
-#X obj 412 384 dac~;
-#X text 531 343 gain (dB);
-#X text 463 385 audio out;
-#X obj 40 379 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X text 57 381 overflow;
-#X obj 412 290 catch~ bus;
-#N canvas 588 126 264 339 env 0;
-#X obj 54 292 table wnd 1024;
-#X msg 64 54 1024;
-#X obj 62 76 t a b;
-#X obj 62 100 until;
-#X obj 62 128 f;
-#X obj 94 128 + 1;
-#X msg 104 100 0;
-#X obj 62 170 / 1024;
-#X obj 55 254 tabwrite wnd;
-#X obj 62 150 t a a;
-#X text 47 236 value;
-#X text 108 236 index;
-#X obj 56 211 expr sin($f1*1.5708);
-#X obj 64 15 loadbang;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 2 1 6 0;
-#X connect 3 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 0 9 0;
-#X connect 5 0 4 1;
-#X connect 6 0 4 1;
-#X connect 7 0 12 0;
-#X connect 9 0 7 0;
-#X connect 9 1 8 1;
-#X connect 12 0 8 0;
-#X connect 13 0 1 0;
-#X restore 416 218 pd env;
-#X obj 40 352 x11 x10 voice-mono bus syn-grain wnd 1024;
-#X obj 496 116 table sample;
-#X obj 410 116 soundfiler;
-#X obj 410 63 openpanel;
-#X obj 411 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X msg 409 92 read -resize \$1 sample;
-#X obj 39 316 list prepend sample;
-#X obj 45 94 hsl 250 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 0 1;
-#X obj 41 152 *;
-#X obj 410 137 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
-10 -262144 -1 -1 0 256;
-#X obj 105 151 / 44.1;
-#X text 41 73 scrub;
-#X text 39 177 position in buffer(ms);
-#X text 70 259 attack sustain decay;
-#X text 414 199 half window for one grain;
-#X obj 39 280 pack 0 200 0 200;
-#X floatatom 116 234 5 0 0 0 - - -;
-#X text 302 95 0...1;
-#X obj 40 195 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 39 173 *;
+#X text 142 195 position in buffer(ms);
+#X text 161 279 attack sustain decay;
+#X text 433 204 half window for one grain;
+#X floatatom 117 242 5 0 0 0 - - -;
+#X text 299 102 0...1;
+#X obj 39 195 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X connect 0 0 3 0;
-#X connect 0 0 3 1;
+#X obj 438 357 out-mono;
+#X obj 376 88 sample \$0-sample;
+#X obj 39 316 list prepend \$0-sample;
+#X obj 39 280 pack 0 100 0 100;
+#X text 160 241 change attack+decay;
+#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 414 14 grrrr.org \, 2011;
+#X text 34 34 granular scrubbing through audio buffer;
+#X floatatom 316 383 5 0 0 0 voices_active - -;
+#X obj 436 226 wnd-sin \$0-wnd 1024;
+#X obj 39 352 x10 voice-mono \$0-bus syn-grain \$0-wnd 1024;
+#X obj 438 337 catch~ \$0-bus;
 #X connect 1 0 2 0;
-#X connect 2 0 0 1;
-#X connect 8 0 0 0;
-#X connect 10 0 6 0;
-#X connect 12 0 19 0;
-#X connect 12 0 20 0;
-#X connect 13 0 15 0;
-#X connect 14 0 13 0;
-#X connect 15 0 12 0;
-#X connect 16 0 10 0;
-#X connect 17 0 18 0;
-#X connect 18 0 28 0;
-#X connect 20 0 18 1;
-#X connect 25 0 16 0;
-#X connect 26 0 25 1;
-#X connect 26 0 25 3;
-#X connect 28 0 25 0;
+#X connect 2 0 8 0;
+#X connect 6 0 12 1;
+#X connect 6 0 12 3;
+#X connect 8 0 12 0;
+#X connect 10 0 2 1;
+#X connect 11 0 19 0;
+#X connect 12 0 11 0;
+#X connect 19 0 0 0;
+#X connect 19 2 17 0;
+#X connect 20 0 9 0;

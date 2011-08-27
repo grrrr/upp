@@ -1,56 +1,50 @@
-#N canvas 242 131 427 484 10;
-#X floatatom 70 104 5 0 0 0 - - -;
-#X obj 70 27 kbd;
-#X obj 72 363 *~ 0;
-#X obj 130 343 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -204786
--1 -1 0 1;
-#X obj 127 363 dbtopow;
-#X obj 72 404 dac~;
-#X text 172 35 keyboard;
-#X text 191 363 gain (dB);
-#X text 123 405 audio out;
-#X text 124 104 MIDI note;
-#X obj 70 128 pack 0 100;
-#X obj 72 226 note_basic;
-#X obj 93 246 note_basic;
-#X obj 115 266 note_basic;
-#X obj 136 286 note_basic;
-#X obj 71 177 pack;
-#X obj 70 152 poly 4 1;
-#X text 134 152 poly with note-stealing;
-#X obj 76 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 242 131 559 480 10;
+#X floatatom 70 160 5 0 0 1 MIDI_note - -;
+#X obj 70 77 kbd;
+#X text 172 85 keyboard;
+#X obj 70 206 pack 0 100;
+#X obj 70 307 note_basic;
+#X obj 91 327 note_basic;
+#X obj 113 347 note_basic;
+#X obj 134 367 note_basic;
+#X obj 70 254 pack;
+#X obj 70 230 poly 4 1;
+#X text 134 230 poly with note-stealing;
+#X obj 74 327 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 98 266 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 96 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 119 286 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 117 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 72 204 route 1 2 3 4;
-#X obj 55 227 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 70 285 route 1 2 3 4;
+#X obj 53 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 70 61 unpack;
-#X obj 70 80 spigot;
-#X connect 0 0 10 0;
-#X connect 1 0 23 0;
-#X connect 2 0 5 0;
-#X connect 2 0 5 1;
-#X connect 3 0 4 0;
-#X connect 4 0 2 1;
-#X connect 10 0 16 0;
-#X connect 11 0 2 0;
-#X connect 12 0 2 0;
-#X connect 13 0 2 0;
-#X connect 14 0 2 0;
-#X connect 15 0 21 0;
-#X connect 16 0 15 0;
-#X connect 16 1 15 1;
-#X connect 21 0 11 0;
-#X connect 21 0 22 0;
-#X connect 21 1 12 0;
-#X connect 21 1 18 0;
-#X connect 21 2 13 0;
-#X connect 21 2 19 0;
-#X connect 21 3 14 0;
-#X connect 21 3 20 0;
-#X connect 23 0 24 0;
-#X connect 23 1 24 1;
-#X connect 24 0 0 0;
+#X obj 70 115 unpack;
+#X obj 70 134 spigot;
+#X obj 70 403 out-mono;
+#X text 75 442 audio out;
+#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 414 14 grrrr.org \, 2011;
+#X text 34 32 native Pure Data approach using [poly];
+#X connect 0 0 3 0;
+#X connect 1 0 16 0;
+#X connect 3 0 9 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 8 0 14 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
+#X connect 14 0 4 0;
+#X connect 14 0 15 0;
+#X connect 14 1 5 0;
+#X connect 14 1 11 0;
+#X connect 14 2 6 0;
+#X connect 14 2 12 0;
+#X connect 14 3 7 0;
+#X connect 14 3 13 0;
+#X connect 16 0 17 0;
+#X connect 16 1 17 1;
+#X connect 17 0 0 0;

@@ -1,12 +1,11 @@
-#N canvas 183 34 551 437 10;
-#X floatatom 72 145 5 0 0 0 - - -;
-#X obj 72 349 *~ 0;
-#X obj 130 329 hsl 128 15 0 127 0 1 empty empty empty -2 -8 0 10 -204786
--1 -1 9200 1;
-#X obj 127 349 dbtopow;
+#N canvas 420 145 555 428 10;
+#X floatatom 72 145 5 0 0 1 MIDI_note - -;
+#X obj 72 356 *~ 0;
+#X obj 128 336 hsl 128 15 0 127 0 1 empty empty gain(dB) -2 -8 0 10
+-204786 -1 -1 9900 1;
+#X obj 125 356 dbtopow;
 #X obj 72 390 dac~;
-#X text 191 349 gain (dB);
-#X text 123 391 audio out;
+#X text 123 392 audio out;
 #X obj 27 166 cnv 15 250 150 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X obj 72 241 osc~;
@@ -18,9 +17,8 @@
 #X text 34 242 sine;
 #X text 287 208 boxed part can go into abstraction;
 #X obj 72 216 mtof;
-#X text 125 146 MIDI note;
 #X text 374 224 note_basic;
-#X msg 140 217 1 20 \, 0 800 20;
+#X msg 141 217 1 20 \, 0 800 20;
 #X text 176 81 computer keyboard (middle rows);
 #X obj 27 11 cnv 15 500 40 empty empty Monophonic_player 10 10 0 14
 -233017 -66577 0;
@@ -28,21 +26,21 @@
 #X text 414 14 grrrr.org \, 2011;
 #X obj 72 123 spigot;
 #X obj 72 104 unpack;
-#X text 126 122 let only key-down pass;
+#X text 123 123 let only key-down pass;
 #X obj 72 69 kbd;
-#X connect 0 0 11 0;
+#X connect 0 0 10 0;
 #X connect 1 0 4 0;
 #X connect 1 0 4 1;
 #X connect 2 0 3 0;
 #X connect 3 0 1 1;
-#X connect 8 0 9 0;
-#X connect 9 0 1 0;
-#X connect 10 0 9 1;
-#X connect 11 0 16 0;
-#X connect 11 1 19 0;
-#X connect 16 0 8 0;
-#X connect 19 0 10 0;
-#X connect 24 0 0 0;
-#X connect 25 0 24 0;
-#X connect 25 1 24 1;
-#X connect 27 0 25 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 1;
+#X connect 10 0 15 0;
+#X connect 10 1 17 0;
+#X connect 15 0 7 0;
+#X connect 17 0 9 0;
+#X connect 22 0 0 0;
+#X connect 23 0 22 0;
+#X connect 23 1 22 1;
+#X connect 25 0 23 0;

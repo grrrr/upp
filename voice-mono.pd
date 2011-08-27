@@ -1,4 +1,4 @@
-#N canvas 253 119 500 217 10;
+#N canvas 253 119 488 204 10;
 #X obj 39 67 flowctrl;
 #X obj 39 23 inlet;
 #X obj 39 143 outlet;
