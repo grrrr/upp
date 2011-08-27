@@ -84,7 +84,7 @@
 #X obj 40 403 list append 1;
 #X obj 450 425 catch~ \$0-bus;
 #X obj 416 265 wnd-lin \$0-wnd 1024;
-#X obj 40 450 x10 voice-bus \$0-bus syn-grain-var \$0-wnd 1024;
+#X obj 40 450 x10 voice-mono \$0-bus syn-grain-var \$0-wnd 1024;
 #X connect 3 0 8 0;
 #X connect 4 0 3 0;
 #X connect 5 1 6 0;

@@ -80,7 +80,7 @@
 #X obj 416 265 wnd-sin \$0-wnd 1024;
 #X obj 114 326 / 2;
 #X obj 450 425 catch~ \$0-bus;
-#X obj 40 450 x10 voice-bus \$0-bus syn-grain \$0-wnd 1024;
+#X obj 40 450 x10 voice-mono \$0-bus syn-grain \$0-wnd 1024;
 #X connect 3 0 8 0;
 #X connect 4 0 3 0;
 #X connect 5 1 6 0;

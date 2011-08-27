@@ -144,7 +144,7 @@
 #X connect 28 0 10 0;
 #X restore 42 135 pd play;
 #X obj 416 265 wnd-lin \$0-wnd 1024;
-#X obj 40 450 x10 voice-bus \$0-bus syn-grain-varcorr \$0-wnd 1024
+#X obj 40 450 x10 voice-mono \$0-bus syn-grain-varcorr \$0-wnd 1024
 ;
 #X connect 2 0 6 0;
 #X connect 3 1 4 0;

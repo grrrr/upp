@@ -13,14 +13,14 @@
 #X obj 44 197 cnv 15 200 200 empty empty eight_voices 20 12 0 14 -233017
 -66577 0;
 #X obj 263 354 out-mono;
-#X obj 53 222 voice-bus \$0-bus note_alt;
-#X obj 53 244 voice-bus \$0-bus note_alt;
-#X obj 53 266 voice-bus \$0-bus note_alt;
-#X obj 53 288 voice-bus \$0-bus note_alt;
-#X obj 53 310 voice-bus \$0-bus note_alt;
-#X obj 53 332 voice-bus \$0-bus note_alt;
-#X obj 53 354 voice-bus \$0-bus note_alt;
-#X obj 53 376 voice-bus \$0-bus note_alt;
+#X obj 53 222 voice-mono \$0-bus note_alt;
+#X obj 53 244 voice-mono \$0-bus note_alt;
+#X obj 53 266 voice-mono \$0-bus note_alt;
+#X obj 53 288 voice-mono \$0-bus note_alt;
+#X obj 53 310 voice-mono \$0-bus note_alt;
+#X obj 53 332 voice-mono \$0-bus note_alt;
+#X obj 53 354 voice-mono \$0-bus note_alt;
+#X obj 53 376 voice-mono \$0-bus note_alt;
 #X obj 263 324 catch~ \$0-bus;
 #X connect 0 0 10 0;
 #X connect 1 0 5 0;
