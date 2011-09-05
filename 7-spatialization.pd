@@ -1,45 +1,45 @@
-#N canvas 517 95 674 482 10;
+#N canvas 655 29 674 482 10;
 #X obj 39 438 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 21600 1;
-#X obj 39 173 *;
-#X text 142 195 position in buffer(ms);
-#X text 161 279 attack sustain decay;
+-1 -1 0 1;
+#X obj 38 167 *;
+#X text 137 187 position in buffer(ms);
+#X text 161 264 attack sustain decay;
 #X text 375 192 half window for one grain;
-#X floatatom 117 242 5 0 0 0 - - -;
+#X floatatom 117 235 5 0 0 0 - - -;
 #X text 299 102 0...1;
-#X obj 39 195 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 12459.8 256;
+#X obj 38 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
 #X obj 376 88 sample \$0-sample;
 #X obj 39 316 list prepend \$0-sample;
-#X obj 39 280 pack 0 100 0 100;
-#X text 160 241 change attack+decay;
+#X obj 39 265 pack 0 100 0 100;
+#X text 160 234 change attack+decay;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 414 14 grrrr.org \, 2011;
 #X text 34 34 granular scrubbing through audio buffer;
-#X floatatom 414 435 5 0 0 0 voices_active - -;
+#X floatatom 395 438 5 0 0 0 voices_active - -;
 #X obj 378 214 wnd-sin \$0-wnd 1024;
 #X obj 377 279 out-stereo;
-#X obj 39 354 t a b;
+#X obj 39 355 t a b;
 #X obj 39 381 list prepend 0;
 #X obj 377 254 catch~ \$0-bus-1;
 #X obj 510 254 catch~ \$0-bus-2;
-#X obj 39 405 x11 x10 voice spat-stereo \$0-bus syn-grain \$0-wnd 1024
-;
 #N canvas 0 22 231 244 rnd 0;
 #X obj 68 34 inlet;
 #X obj 68 163 outlet;
-#X obj 68 83 random 1e+06;
-#X obj 68 106 / 500000;
-#X obj 68 134 - 1;
-#X connect 0 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 4 0 1 0;
+#X obj 68 126 - 1;
+#X obj 68 106 * 2;
+#X obj 68 83 urnd;
+#X connect 0 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
 #X restore 134 355 pd rnd;
 #X text 185 357 random panning;
+#X obj 40 408 x 20 voice spat-stereo \$0-bus syn-grain \$0-wnd 1024
+;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 6 0 11 1;
@@ -49,10 +49,10 @@
 #X connect 10 0 19 0;
 #X connect 11 0 10 0;
 #X connect 19 0 20 0;
-#X connect 19 1 24 0;
-#X connect 20 0 23 0;
+#X connect 19 1 23 0;
+#X connect 20 0 25 0;
 #X connect 21 0 18 0;
 #X connect 22 0 18 1;
-#X connect 23 0 0 0;
-#X connect 23 2 16 0;
-#X connect 24 0 20 1;
+#X connect 23 0 20 1;
+#X connect 25 0 0 0;
+#X connect 25 2 16 0;

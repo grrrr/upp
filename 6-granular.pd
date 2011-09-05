@@ -2,7 +2,7 @@
 #X obj 39 385 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 0 1;
+-1 -1 13600 1;
 #X obj 39 173 *;
 #X text 142 195 position in buffer(ms);
 #X text 161 279 attack sustain decay;
@@ -23,7 +23,7 @@
 #X floatatom 327 383 5 0 0 0 voices_active - -;
 #X obj 436 226 wnd-sin \$0-wnd 1024;
 #X obj 438 337 catch~ \$0-bus;
-#X obj 39 352 x11 x10 voice-mono \$0-bus syn-grain \$0-wnd 1024;
+#X obj 39 352 x2 50 voice-mono \$0-bus syn-grain \$0-wnd 1024;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 6 0 12 1;

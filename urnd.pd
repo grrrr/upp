@@ -1,0 +1,10 @@
+#N canvas 341 168 470 233 10;
+#X obj 68 70 inlet;
+#X obj 68 163 outlet;
+#X obj 68 104 random 1e+06;
+#X obj 68 127 / 1e+06;
+#X text 28 10 deliver uniformly distributed random number in the range
+0...1;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;

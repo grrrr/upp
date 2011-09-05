@@ -1,4 +1,4 @@
-#N canvas 124 105 563 692 10;
+#N canvas 376 81 562 681 10;
 #X floatatom 54 193 5 0 0 1 MIDI_note - -;
 #X obj 54 90 kbd;
 #X obj 54 637 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
@@ -11,8 +11,8 @@
 #X obj 104 142 == 0;
 #X floatatom 233 636 5 0 0 0 voices_active - -;
 #X obj 344 115 out-mono;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player 10 10 0 14
--233017 -66577 0;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
 #X text 414 14 grrrr.org \, 2011;
 #X text 34 34 playing notes with note-dependent timbre and decay;
 #X text 57 591 tag bus midinote volume attack decay;
@@ -102,26 +102,26 @@
 #X text 38 346 |;
 #X text 161 564 prepend note number as tag;
 #X text 196 538 prepend bus name;
-#X obj 54 609 x11 x10 voice-mod note_off;
 #X text 246 495 add ADSR params (ms ms gain ms);
 #X obj 54 257 pack 0 10;
 #X obj 54 494 list append 20 100 0.5 500;
 #X obj 54 537 list prepend \$0-bus;
 #X obj 344 89 catch~ \$0-bus;
+#X obj 54 609 x2 100 voice-mod note_off;
 #X connect 0 0 4 0;
 #X connect 1 0 6 0;
-#X connect 4 0 25 0;
+#X connect 4 0 24 0;
 #X connect 4 1 5 1;
-#X connect 5 0 23 0;
+#X connect 5 0 28 0;
 #X connect 6 0 7 0;
 #X connect 6 1 8 0;
 #X connect 7 0 0 0;
-#X connect 7 1 23 1;
+#X connect 7 1 28 1;
 #X connect 8 0 7 1;
-#X connect 15 0 26 0;
-#X connect 23 0 2 0;
-#X connect 23 2 9 0;
-#X connect 25 0 15 0;
-#X connect 26 0 27 0;
-#X connect 27 0 5 0;
-#X connect 28 0 10 0;
+#X connect 15 0 25 0;
+#X connect 24 0 15 0;
+#X connect 25 0 26 0;
+#X connect 26 0 5 0;
+#X connect 27 0 10 0;
+#X connect 28 0 2 0;
+#X connect 28 2 9 0;

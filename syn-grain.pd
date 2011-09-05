@@ -1,4 +1,4 @@
-#N canvas 500 464 617 430 10;
+#N canvas 537 373 617 430 10;
 #X obj 225 47 inlet;
 #X obj 227 369 outlet~;
 #X obj 227 344 *~;
@@ -28,6 +28,8 @@
 #X obj 398 281 *~ \$2;
 #X obj 397 302 tabread4~ \$1;
 #X obj 245 225 ms2samples;
+#X obj 551 45 inlet;
+#X text 550 65 dummy;
 #X connect 0 0 6 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;

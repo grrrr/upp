@@ -1,4 +1,4 @@
-#N canvas 69 59 636 716 10;
+#N canvas 69 59 559 691 10;
 #X floatatom 68 167 5 0 0 1 MIDI_note - -;
 #X obj 68 83 kbd;
 #X obj 68 643 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
@@ -113,26 +113,26 @@
 #X coords 0 -1 1 1 400 320 2 300 25;
 #X restore 68 230 pd timbre+dur;
 #X text 73 598 bus midinote volume attack decay;
-#X obj 68 616 x11 x10 voice note_busvoldur;
 #X obj 68 120 unpack;
 #X obj 68 141 spigot;
 #X floatatom 261 643 5 0 0 0 voices_active - -;
-#X obj 338 104 out-mono;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player 10 10 0 14
--233017 -66577 0;
+#X obj 338 107 out-mono;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
 #X text 414 14 grrrr.org \, 2011;
 #X text 34 34 playing notes with note-dependent timbre and decay;
 #X obj 68 202 pack 0 15;
-#X obj 338 80 catch~ \$0-bus;
+#X obj 338 83 catch~ \$0-bus;
 #X obj 68 565 list prepend \$0-bus;
-#X connect 0 0 14 0;
-#X connect 1 0 7 0;
-#X connect 4 0 16 0;
-#X connect 6 0 2 0;
-#X connect 6 2 9 0;
-#X connect 7 0 8 0;
-#X connect 7 1 8 1;
-#X connect 8 0 0 0;
-#X connect 14 0 4 0;
-#X connect 15 0 10 0;
-#X connect 16 0 6 0;
+#X obj 68 616 x2 100 voice note_busvoldur;
+#X connect 0 0 13 0;
+#X connect 1 0 6 0;
+#X connect 4 0 15 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 0 0;
+#X connect 13 0 4 0;
+#X connect 14 0 9 0;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 2 8 0;
