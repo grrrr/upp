@@ -3,9 +3,8 @@
 #X obj 53 80 kbd;
 #X obj 53 404 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player 10 10 0 14
--233017 -66577 0;
-#X text 414 14 grrrr.org \, 2011;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
 #X obj 53 118 unpack;
 #X obj 53 137 spigot;
 #X text 34 34 encapsulating abstractions into daisy-chained voices
@@ -22,17 +21,18 @@
 #X obj 53 354 voice-mono \$0-bus note_alt;
 #X obj 53 376 voice-mono \$0-bus note_alt;
 #X obj 263 324 catch~ \$0-bus;
-#X connect 0 0 10 0;
-#X connect 1 0 5 0;
-#X connect 5 0 6 0;
-#X connect 5 1 6 1;
-#X connect 6 0 0 0;
+#X text 414 14 grrrr.org \, 2012;
+#X connect 0 0 9 0;
+#X connect 1 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 5 0 0 0;
+#X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
-#X connect 16 0 17 0;
-#X connect 17 0 2 0;
-#X connect 18 0 9 0;
+#X connect 16 0 2 0;
+#X connect 17 0 8 0;

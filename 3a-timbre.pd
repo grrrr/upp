@@ -191,9 +191,8 @@
 #X connect 52 0 53 0;
 #X connect 53 0 22 0;
 #X restore 47 406 pd 50voices;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player 10 10 0 14
--233017 -66577 0;
-#X text 414 14 grrrr.org \, 2011;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
 #X obj 47 131 unpack;
 #X obj 47 152 spigot;
 #X text 34 34 playing notes with a formant-defined timbre;
@@ -204,12 +203,13 @@
 #X text 31 275 |;
 #X text 31 288 |;
 #X obj 369 374 catch~ \$0-bus;
+#X text 414 14 grrrr.org \, 2012;
 #X connect 0 0 5 0;
-#X connect 1 0 9 0;
+#X connect 1 0 8 0;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
 #X connect 6 0 2 0;
-#X connect 9 0 10 0;
-#X connect 9 1 10 1;
-#X connect 10 0 0 0;
-#X connect 18 0 12 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 0 0;
+#X connect 17 0 11 0;

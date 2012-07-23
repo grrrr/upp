@@ -16,7 +16,6 @@
 #X obj 40 426 list prepend \$0-sample;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X text 414 14 grrrr.org \, 2011;
 #X obj 54 375 s \$0-lastgrain;
 #X obj 138 245 s \$0-restart;
 #X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
@@ -146,27 +145,28 @@
 #X obj 416 265 wnd-lin \$0-wnd 1024;
 #X obj 40 450 x 10 voice-mono \$0-bus syn-grain-varcorr \$0-wnd 1024
 ;
+#X text 414 14 grrrr.org \, 2012;
 #X connect 2 0 6 0;
 #X connect 3 1 4 0;
-#X connect 4 0 15 0;
+#X connect 4 0 14 0;
 #X connect 5 0 4 1;
 #X connect 6 0 3 0;
-#X connect 6 1 26 0;
+#X connect 6 1 25 0;
 #X connect 8 0 3 1;
-#X connect 11 0 30 0;
-#X connect 16 0 28 0;
-#X connect 17 0 28 1;
-#X connect 18 0 17 0;
-#X connect 19 0 20 0;
-#X connect 20 0 26 1;
-#X connect 20 0 26 3;
-#X connect 22 0 23 0;
-#X connect 23 0 24 1;
-#X connect 24 0 11 0;
-#X connect 25 0 7 0;
-#X connect 26 0 14 0;
-#X connect 26 0 24 0;
-#X connect 28 0 2 0;
-#X connect 28 1 26 4;
-#X connect 30 0 9 0;
-#X connect 30 2 10 0;
+#X connect 11 0 29 0;
+#X connect 15 0 27 0;
+#X connect 16 0 27 1;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 25 1;
+#X connect 19 0 25 3;
+#X connect 21 0 22 0;
+#X connect 22 0 23 1;
+#X connect 23 0 11 0;
+#X connect 24 0 7 0;
+#X connect 25 0 13 0;
+#X connect 25 0 23 0;
+#X connect 27 0 2 0;
+#X connect 27 1 25 4;
+#X connect 29 0 9 0;
+#X connect 29 2 10 0;

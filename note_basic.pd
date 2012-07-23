@@ -1,4 +1,4 @@
-#N canvas 751 452 330 259 10;
+#N canvas 26 39 330 259 10;
 #X obj 68 129 osc~;
 #X obj 68 179 *~;
 #X obj 137 129 vline~;
@@ -9,7 +9,7 @@
 #X obj 68 27 inlet;
 #X obj 68 207 outlet~;
 #X obj 68 105 mtof;
-#X text 119 27 MIDI note in;
+#X text 120 27 MIDI note in;
 #X msg 136 105 1 20 \, 0 800 20;
 #X connect 0 0 1 0;
 #X connect 1 0 8 0;

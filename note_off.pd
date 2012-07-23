@@ -1,4 +1,4 @@
-#N canvas 665 316 580 433 10;
+#N canvas 8 30 580 433 10;
 #X obj 184 32 inlet;
 #X obj 65 361 outlet;
 #X text 47 381 bang when ready;
@@ -21,7 +21,7 @@
 #X obj 439 135 f;
 #X obj 439 57 t b;
 #X msg 476 232 0 \$1;
-#X text 438 16 mod msg;
+#X text 437 16 mod msg;
 #X obj 369 231 pack 0 0 0;
 #X obj 369 203 *;
 #X msg 317 231 \$2 \$3;
