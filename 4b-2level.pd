@@ -1,4 +1,4 @@
-#N canvas 69 59 559 691 10;
+#N canvas 32 38 559 691 10;
 #X floatatom 68 167 5 0 0 1 MIDI_note - -;
 #X obj 68 83 kbd;
 #X obj 68 643 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
@@ -123,8 +123,8 @@
 #X obj 68 202 pack 0 15;
 #X obj 338 83 catch~ \$0-bus;
 #X obj 68 565 list prepend \$0-bus;
-#X obj 68 616 x2 100 voice note_busvoldur;
 #X text 414 14 grrrr.org \, 2012;
+#X obj 68 616 x2 30 note_busvoldur;
 #X connect 0 0 12 0;
 #X connect 1 0 6 0;
 #X connect 4 0 14 0;
@@ -133,6 +133,6 @@
 #X connect 7 0 0 0;
 #X connect 12 0 4 0;
 #X connect 13 0 9 0;
-#X connect 14 0 15 0;
-#X connect 15 0 2 0;
-#X connect 15 2 8 0;
+#X connect 14 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 2 8 0;

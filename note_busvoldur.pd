@@ -24,6 +24,8 @@
 #X obj 238 316 throw~ \$0-dummy;
 #X obj 237 385 catch~ \$0-dummy;
 #X text 308 183 volume \, attack+decay;
+#X obj 417 44 inlet;
+#X text 413 21 mod dummy;
 #X connect 0 0 19 0;
 #X connect 2 0 1 0;
 #X connect 6 0 7 0;
