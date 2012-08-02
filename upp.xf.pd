@@ -1,4 +1,4 @@
-#N canvas 619 175 889 269 10;
+#N canvas 114 262 889 269 10;
 #X obj 69 38 inlet;
 #X obj 69 195 outlet;
 #X obj 142 195 outlet;
@@ -20,7 +20,6 @@
 #X msg 430 192 \; pd-voices loadbang;
 #X obj 558 160 list append \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
 #X obj 558 116 pack 0 \$0;
-#X msg 558 138 comm UPP-\$2 \$1;
 #N canvas 673 286 854 788 comm 0;
 #X obj 79 48 inlet;
 #X text 296 460 release;
@@ -30,15 +29,15 @@
 #X obj 153 589 t a;
 #X msg 153 542 -1;
 #X obj 118 626 nbx 5 14 -1e+37 1e+37 0 0 empty empty active 0 -8 0
-10 -262144 -1 -1 15 256;
+10 -262144 -1 -1 8 256;
 #X text 360 38 modulation message;
 #X msg 118 543 1;
 #X obj 118 588 +;
 #X obj 491 702 outlet;
 #X text 488 723 voices active;
 #X text 77 30 event message;
-#X obj 594 345 table \$0-free \$1;
-#X obj 594 376 table \$0-assigned \$1;
+#X obj 562 361 table \$0-free \$1;
+#X obj 562 392 table \$0-assigned \$1;
 #X obj 628 47 loadbang;
 #X obj 627 212 tabwrite \$0-free;
 #X obj 628 123 until;
@@ -162,14 +161,14 @@
 #X msg 263 336 symbol \$1-\$2;
 #X obj 158 265 f;
 #X obj 263 410 fwd;
-#X obj 610 496 tabdump \$0-free;
-#X obj 610 471 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 565 468 tabdump \$0-free;
+#X obj 565 443 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 710 469 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 665 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 710 494 tabdump \$0-assigned;
-#X obj 610 524 print FREELIST;
-#X obj 710 522 print ASS;
+#X obj 665 466 tabdump \$0-assigned;
+#X obj 565 496 print FREELIST;
+#X obj 665 494 print ASS;
 #X obj 106 199 > 0;
 #X text 361 247 active voices;
 #X obj 630 175 t a b a;
@@ -231,18 +230,19 @@
 #X connect 58 0 9 0;
 #X connect 58 1 36 0;
 #X restore 69 103 pd comm;
-#X obj 457 149 dyn-chain;
-#X connect 0 0 20 0;
-#X connect 5 0 20 1;
+#X obj 457 149 upp.dynchain;
+#X msg 558 138 upp.comm UPP-\$2 \$1;
+#X connect 0 0 19 0;
+#X connect 5 0 19 1;
 #X connect 10 0 15 0;
-#X connect 14 0 21 0;
+#X connect 14 0 20 0;
 #X connect 15 0 16 0;
 #X connect 15 1 14 0;
-#X connect 17 0 21 1;
-#X connect 18 0 19 0;
-#X connect 19 0 17 0;
-#X connect 20 0 1 0;
-#X connect 20 1 2 0;
-#X connect 20 2 7 0;
-#X connect 21 1 18 0;
+#X connect 17 0 20 1;
+#X connect 18 0 21 0;
+#X connect 19 0 1 0;
+#X connect 19 1 2 0;
+#X connect 19 2 7 0;
+#X connect 20 1 18 0;
+#X connect 21 0 17 0;
 #X coords 0 0 1 1 100 50 0;

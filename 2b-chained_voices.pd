@@ -1,12 +1,12 @@
 #N canvas 202 89 559 391 10;
 #X floatatom 45 176 5 0 0 1 MIDI_note - -;
 #X obj 45 87 kbd;
-#X obj 45 238 flowctrl;
+#X obj 45 238 upp.flowctrl;
 #X obj 45 352 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X obj 45 265 flowctrl;
-#X obj 45 292 flowctrl;
-#X obj 45 319 flowctrl;
+#X obj 45 265 upp.flowctrl;
+#X obj 45 292 upp.flowctrl;
+#X obj 45 319 upp.flowctrl;
 #X obj 45 126 unpack;
 #X obj 45 145 spigot;
 #X obj 115 238 note_alt;

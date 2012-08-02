@@ -9,19 +9,19 @@
 #X obj 53 137 spigot;
 #X text 34 34 encapsulating abstractions into daisy-chained voices
 ;
-#X obj 48 197 cnv 15 200 200 empty empty eight_voices 20 12 0 14 -233017
+#X obj 48 197 cnv 15 230 200 empty empty eight_voices 20 12 0 14 -233017
 -66577 0;
-#X obj 263 354 out-mono;
-#X obj 263 324 catch~ \$0-bus;
+#X obj 308 357 out-mono;
+#X obj 308 327 catch~ \$0-bus;
 #X text 414 14 grrrr.org \, 2012;
-#X obj 53 222 flow voice-mono \$0-bus note_alt;
-#X obj 53 244 flow voice-mono \$0-bus note_alt;
-#X obj 53 266 flow voice-mono \$0-bus note_alt;
-#X obj 53 288 flow voice-mono \$0-bus note_alt;
-#X obj 53 310 flow voice-mono \$0-bus note_alt;
-#X obj 53 332 flow voice-mono \$0-bus note_alt;
-#X obj 53 354 flow voice-mono \$0-bus note_alt;
-#X obj 53 376 flow voice-mono \$0-bus note_alt;
+#X obj 53 222 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 244 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 266 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 288 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 310 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 332 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 354 upp.flow voice-mono \$0-bus note_alt;
+#X obj 53 376 upp.flow voice-mono \$0-bus note_alt;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 4 0 5 0;
