@@ -1,4 +1,4 @@
-#N canvas 597 50 562 681 10;
+#N canvas 23 25 562 681 10;
 #X floatatom 54 193 5 0 0 1 MIDI_note - -;
 #X obj 54 637 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;

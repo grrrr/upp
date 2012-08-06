@@ -1,16 +1,16 @@
 #N canvas 15 29 670 498 10;
-#X obj 38 464 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+#X obj 39 461 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 0 1;
-#X obj 38 167 *;
+-1 -1 13600 1;
+#X obj 39 167 *;
 #X text 137 187 position in buffer(ms);
 #X text 161 264 attack sustain decay;
 #X text 375 177 half window for one grain;
 #X floatatom 117 235 5 0 0 0 - - -;
 #X text 299 102 0...1;
-#X obj 38 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+#X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 6902 256;
 #X obj 377 88 sample \$0-sample;
 #X obj 39 306 list prepend \$0-sample;
 #X obj 39 265 pack 0 100 0 100;
@@ -18,11 +18,11 @@
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 granular scrubbing through audio buffer;
-#X floatatom 394 464 5 0 0 0 voices_active - -;
+#X floatatom 324 460 5 0 0 0 voices_active - -;
 #X obj 378 195 wnd-sin \$0-wnd 1024;
 #X obj 377 233 catch~ \$0-bus-1;
 #X obj 510 233 catch~ \$0-bus-2;
-#X obj 38 407 list prepend 0 0;
+#X obj 39 407 list prepend 0 0;
 #X obj 39 358 t a b;
 #X text 158 405 x y;
 #N canvas 0 22 319 326 polarpanning 0;
@@ -66,7 +66,7 @@
 #X connect 17 1 6 0;
 #X restore 147 359 pd polarpanning;
 #X obj 267 359 hsl 128 15 0.05 1 1 0 empty empty deviation -2 -8 0
-10 -262130 -1 -1 0 1;
+10 -262130 -1 -1 8600 1;
 #X floatatom 265 378 5 0 0 0 - - -;
 #X obj 396 254 catch~ \$0-bus-3;
 #X obj 529 254 catch~ \$0-bus-4;
