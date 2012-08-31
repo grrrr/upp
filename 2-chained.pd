@@ -9,10 +9,10 @@
 #X obj 45 319 upp.flowctrl;
 #X obj 45 126 unpack;
 #X obj 45 145 spigot;
-#X obj 115 238 note_alt;
-#X obj 115 265 note_alt;
-#X obj 115 292 note_alt;
-#X obj 115 319 note_alt;
+#X obj 132 238 note_alt;
+#X obj 132 265 note_alt;
+#X obj 132 292 note_alt;
+#X obj 132 319 note_alt;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 32 can play as many events as there are voices;

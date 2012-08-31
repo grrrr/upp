@@ -1,0 +1,55 @@
+#N canvas 344 194 560 591 10;
+#X obj 36 79 kbd;
+#X obj 36 545 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 34 encapsulating abstractions into daisy-chained voices
+;
+#X obj 31 338 cnv 15 230 200 empty empty eight_voices 20 12 0 14 -233017
+-66577 0;
+#X obj 313 520 out-mono;
+#X obj 313 490 catch~ \$0-bus;
+#X text 414 14 grrrr.org \, 2012;
+#X floatatom 36 150 5 0 0 1 MIDI_note - -;
+#X obj 36 125 unpack;
+#X obj 36 203 dilemma;
+#X obj 75 181 == 0;
+#X obj 36 363 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 385 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 407 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 429 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 451 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 473 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 495 upp.flow voice-mono \$0-bus note_off;
+#X obj 36 517 upp.flow voice-mono \$0-bus note_off;
+#X obj 290 365 t a;
+#X obj 36 261 list append 1 20 100 0.5 500;
+#X text 228 262 add ADSR params (gain ms ms gain ms);
+#X text 20 221 noteon;
+#X text 70 221 noteoff;
+#X connect 0 0 9 0;
+#X connect 6 0 5 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 9 1 11 0;
+#X connect 10 0 21 0;
+#X connect 10 1 20 0;
+#X connect 11 0 10 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 1 0;
+#X connect 20 0 12 1;
+#X connect 20 0 13 1;
+#X connect 20 0 14 1;
+#X connect 20 0 15 1;
+#X connect 20 0 16 1;
+#X connect 20 0 17 1;
+#X connect 20 0 18 1;
+#X connect 20 0 19 1;
+#X connect 21 0 12 0;
