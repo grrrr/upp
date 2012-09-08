@@ -1,4 +1,4 @@
-#N canvas 505 145 468 381 10;
+#N canvas 55 41 468 381 10;
 #X obj 211 31 inlet;
 #X obj 65 281 outlet;
 #X text 61 209 total duration;

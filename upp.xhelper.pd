@@ -1,4 +1,4 @@
-#N canvas 396 109 785 676 10;
+#N canvas 396 109 780 637 10;
 #X obj 69 38 inlet;
 #X obj 367 420 t a b;
 #X obj 69 562 outlet;
@@ -37,6 +37,7 @@
 #X obj 506 332 outlet event_msg;
 #X obj 643 330 outlet mod_msg;
 #X obj 135 143 dilemma;
+#X text 648 21 grrrr.org 2012;
 #X connect 0 0 34 0;
 #X connect 1 0 2 0;
 #X connect 1 1 14 0;

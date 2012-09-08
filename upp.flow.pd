@@ -1,21 +1,21 @@
-#N canvas 164 133 514 290 10;
-#X obj 39 23 inlet;
-#X obj 39 217 outlet;
-#X obj 154 217 outlet;
-#X obj 395 22 loadbang;
-#X text 38 233 pass;
-#X text 152 234 release;
-#X obj 382 154 cnv 15 100 100 empty empty empty 20 12 0 14 -233017
+#N canvas 85 62 606 318 10;
+#X obj 39 51 inlet;
+#X obj 39 245 outlet;
+#X obj 154 245 outlet;
+#X obj 395 50 loadbang;
+#X text 38 261 pass;
+#X text 152 262 release;
+#X obj 382 182 cnv 15 100 100 empty empty empty 20 12 0 14 -233017
 -66577 0;
-#X obj 414 221 switch~;
-#X msg 431 174 1;
-#X msg 396 174 0;
-#X obj 415 199 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 414 249 switch~;
+#X msg 431 202 1;
+#X msg 396 202 0;
+#X obj 415 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 307 23 inlet;
-#X obj 154 187 t a b;
-#X obj 39 141 upp.flowctrl;
-#X obj 307 48 spigot;
+#X obj 307 51 inlet;
+#X obj 154 215 t a b;
+#X obj 39 169 upp.flowctrl;
+#X obj 307 76 spigot;
 #N canvas 359 418 377 266 check 0;
 #X obj 215 47 inlet;
 #X obj 49 49 inlet;
@@ -35,9 +35,12 @@
 #X connect 8 0 7 1;
 #X connect 9 0 4 0;
 #X connect 9 1 5 0;
-#X restore 307 119 pd check;
-#X obj 154 25 t a b a;
-#X obj 154 143 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
+#X restore 307 147 pd check;
+#X obj 154 106 t a b a;
+#X obj 154 171 \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
+#X text 491 28 grrrr.org 2012;
+#X text 38 31 event message;
+#X text 306 31 mod message;
 #X connect 0 0 13 0;
 #X connect 3 0 9 0;
 #X connect 8 0 10 0;

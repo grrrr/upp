@@ -2,7 +2,7 @@
 #X obj 39 461 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 13600 1;
+-1 -1 0 1;
 #X obj 39 167 *;
 #X text 137 187 position in buffer(ms);
 #X text 161 264 attack sustain decay;
@@ -10,7 +10,7 @@
 #X floatatom 117 235 5 0 0 0 - - -;
 #X text 299 102 0...1;
 #X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 6902 256;
+-262144 -1 -1 0 256;
 #X obj 377 88 sample \$0-sample;
 #X obj 39 306 list prepend \$0-sample;
 #X obj 39 265 pack 0 100 0 100;
@@ -66,14 +66,14 @@
 #X connect 17 1 6 0;
 #X restore 147 359 pd polarpanning;
 #X obj 267 359 hsl 128 15 0.05 1 1 0 empty empty deviation -2 -8 0
-10 -262130 -1 -1 8600 1;
+10 -262130 -1 -1 0 1;
 #X floatatom 265 378 5 0 0 0 - - -;
 #X obj 396 254 catch~ \$0-bus-3;
 #X obj 529 254 catch~ \$0-bus-4;
 #X obj 377 281 out-quad;
-#X text 376 323 quadrophonic output;
 #X text 414 14 grrrr.org \, 2012;
 #X obj 39 434 upp.xc 20 spat-quad \$0-bus syn-grain \$0-wnd 1024;
+#X text 376 323 quadrophonic output;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 6 0 11 1;
@@ -84,7 +84,7 @@
 #X connect 11 0 10 0;
 #X connect 17 0 27 0;
 #X connect 18 0 27 1;
-#X connect 19 0 30 0;
+#X connect 19 0 29 0;
 #X connect 20 0 19 0;
 #X connect 20 1 22 0;
 #X connect 22 0 19 1;
@@ -92,5 +92,5 @@
 #X connect 23 0 24 0;
 #X connect 25 0 27 2;
 #X connect 26 0 27 3;
-#X connect 30 0 0 0;
-#X connect 30 2 15 0;
+#X connect 29 0 0 0;
+#X connect 29 2 15 0;

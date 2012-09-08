@@ -1,7 +1,7 @@
 #N canvas 383 280 397 296 10;
 #X obj 63 31 inlet;
 #X obj 128 237 outlet;
-#X obj 220 35 inlet;
+#X obj 220 30 inlet;
 #X obj 220 57 route float symbol;
 #X msg 220 80 0;
 #X msg 260 81 1;
@@ -13,6 +13,7 @@
 #X obj 176 158 select s;
 #X msg 102 201 1;
 #X obj 64 158 select 0;
+#X text 288 23 grrrr.org 2012;
 #X connect 0 0 9 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;

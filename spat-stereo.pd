@@ -7,6 +7,7 @@
 #X obj 295 220 throw~ \$1-2;
 #X obj 208 219 throw~ \$1-1;
 #X obj 208 170 pan-stereo;
+#X text 310 25 grrrr.org 2012;
 #X connect 0 0 4 0;
 #X connect 2 0 3 1;
 #X connect 3 0 1 0;

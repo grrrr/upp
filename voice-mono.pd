@@ -1,4 +1,4 @@
-#N canvas 191 160 488 204 10;
+#N canvas 191 160 384 203 10;
 #X obj 39 23 inlet;
 #X obj 39 143 outlet;
 #X obj 197 144 throw~ \$1;

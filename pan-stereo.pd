@@ -11,6 +11,7 @@
 #X text 472 79 pi/4;
 #X obj 188 210 expr sin((1-$f1)*$f2);
 #X obj 359 209 expr sin((1+$f1)*$f2);
+#X text 417 27 grrrr.org 2012;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;

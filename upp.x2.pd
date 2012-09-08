@@ -28,7 +28,7 @@
 #X text 655 31 grrrr.org 2012;
 #N canvas 335 116 610 470 populate 0;
 #X obj 54 33 inlet;
-#N canvas 0 22 450 300 rep 0;
+#N canvas 0 22 285 284 rep 0;
 #X obj 98 47 inlet;
 #X obj 100 219 outlet;
 #X obj 101 155 f;
@@ -56,8 +56,6 @@
 #X obj 292 40 inlet;
 #X text 295 22 pre-creation;
 #X text 49 28 post-creation;
-#X msg 51 91 list c-\$1 v-\$1;
-#X msg 292 89 pd c-\$1;
 #X msg 51 148 \; pd-\$1 vis 0 \; pd-\$1 obj 10 10 inlet \; pd-\$1 obj
 100 10 inlet \; pd-\$1 obj 200 10 outlet \; pd-\$1 obj 300 10 outlet
 \; pd-\$1 obj 30 100 upp.xhelper \; pd-\$1 obj 130 100 pd \$2 \; pd-\$2
@@ -66,10 +64,12 @@ connect 4 0 2 0 \; pd-\$1 connect 4 1 3 0 \; pd-\$2 obj 10 10 inlet
 \; pd-\$2 obj 100 10 inlet \; pd-\$2 obj 200 10 outlet \; pd-\$2 obj
 300 10 outlet \; pd-\$1 connect 4 3 5 0 \; pd-\$1 connect 4 4 5 1 \;
 pd-\$1 connect 5 0 4 2 \; pd-\$1 connect 5 1 4 3 \;;
-#X connect 0 0 5 0;
-#X connect 2 0 6 0;
-#X connect 5 0 7 0;
-#X connect 6 0 1 0;
+#X msg 51 91 list c_\$1 v_\$1;
+#X msg 292 89 pd c_\$1;
+#X connect 0 0 6 0;
+#X connect 2 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
 #X restore 521 418 pd sub;
 #X obj 142 418 list append upp.flow \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9
 ;
