@@ -52,7 +52,7 @@
 #X connect 21 0 12 0;
 #X restore 42 128 pd play;
 #X obj 104 205 moses;
-#X obj 136 225 spigot;
+#X obj 131 227 spigot;
 #X obj 175 129 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
 1;
 #X obj 42 204 t a a;
@@ -65,7 +65,7 @@
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 54 375 s \$0-lastgrain;
-#X obj 136 245 s \$0-restart;
+#X obj 131 247 s \$0-restart;
 #X obj 40 346 pack 0 100 0 100;
 #X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;

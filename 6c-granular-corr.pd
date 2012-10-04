@@ -3,8 +3,8 @@
 #X text 416 246 half window for one grain;
 #X obj 42 172 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 106 205 moses;
-#X obj 138 225 spigot;
+#X obj 131 205 moses;
+#X obj 158 226 spigot;
 #X obj 175 129 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
 1;
 #X obj 42 204 t a a;
@@ -17,7 +17,7 @@
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 54 375 s \$0-lastgrain;
-#X obj 138 245 s \$0-restart;
+#X obj 158 246 s \$0-restart;
 #X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
 #X obj 88 110 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
