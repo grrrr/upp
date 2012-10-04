@@ -19,11 +19,11 @@
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 granular scrubbing through audio buffer;
-#X floatatom 327 383 5 0 0 0 voices_active - -;
+#X floatatom 324 383 5 0 0 0 voices_active - -;
 #X obj 436 226 wnd-sin \$0-wnd 1024;
 #X obj 438 337 catch~ \$0-bus;
 #X text 414 14 grrrr.org \, 2012;
-#X obj 39 352 upp.xf 50 voice-mono \$0-bus syn-grain \$0-wnd 1024;
+#X obj 39 352 upp.xf 50 spat-mono \$0-bus syn-grain \$0-wnd 1024;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 6 0 12 1;

@@ -96,10 +96,10 @@
 #X text 50 258 ^;
 #X text 50 263 |;
 #X text 50 276 |;
-#X floatatom 322 458 5 0 0 0 voices_active - -;
+#X floatatom 297 458 5 0 0 0 voices_active - -;
 #X obj 330 86 catch~ \$0-bus;
 #X text 414 14 grrrr.org \, 2012;
-#X obj 66 431 upp.xc 50 voice-mono \$0-bus note_alt_vol;
+#X obj 66 431 upp.xc 50 spat-mono \$0-bus note_alt_vol;
 #X connect 0 0 3 0;
 #X connect 3 0 11 0;
 #X connect 5 0 6 0;

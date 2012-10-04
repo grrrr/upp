@@ -22,7 +22,7 @@
 #X text 444 52 L<<<<<R;
 #X obj 436 283 *~ \$2;
 #X obj 435 304 tabread4~ \$1;
-#X text 119 14 sample_buffer playpos(ms) attack(ms) sustain(ms) release(ms)
+#X text 139 14 sample_buffer playpos(ms) attack(ms) sustain(ms) release(ms)
 speed;
 #X obj 227 313 tabread4~;
 #X obj 420 72 unpack 0 0 0 0 0;
@@ -34,7 +34,9 @@ speed;
 #X obj 267 216 * 1;
 #X obj 245 162 t a a;
 #X text 218 160 pos;
-#X text 517 17 grrrr.org 2012;
+#X text 23 15 grrrr.org 2012;
+#X obj 469 16 inlet;
+#X text 505 16 dummy;
 #X connect 0 0 5 0;
 #X connect 2 0 1 0;
 #X connect 4 0 3 0;
