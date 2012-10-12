@@ -1,4 +1,4 @@
-#N canvas 35 389 657 427 10;
+#N canvas 1022 125 657 427 10;
 #X obj 225 47 inlet;
 #X obj 229 380 outlet~;
 #X obj 229 355 *~;
@@ -29,8 +29,8 @@
 #X text 218 160 pos;
 #X obj 420 69 unpack 0 0 0 0 0 0;
 #X obj 545 146 +;
-#X text 522 54 VV;
-#X text 514 42 delay;
+#X text 508 54 VV;
+#X text 500 42 delay;
 #X obj 229 264 pack 0 0 0;
 #X obj 63 328 + 2;
 #X text 94 325 safety;
