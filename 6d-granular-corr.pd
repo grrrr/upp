@@ -1,8 +1,8 @@
-#N canvas 584 86 680 569 10;
+#N canvas 74 56 680 569 10;
 #X text 146 202 position in buffer(ms);
 #X text 416 276 half window for one grain;
 #X obj 42 202 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 18200 256;
+-262144 -1 -1 500 256;
 #X obj 131 235 moses;
 #X obj 159 257 spigot;
 #X obj 188 126 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 1
@@ -17,14 +17,14 @@
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 54 405 s \$0-lastgrain;
-#X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
+#X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
 ;
 #X obj 88 110 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
 -1 -1 1 256;
 #X obj 91 92 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10 -204786
--1 -1 8467 1;
+-1 -1 8667 1;
 #X obj 114 326 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
-10 -204786 -1 -1 200 256;
+10 -204786 -1 -1 500 256;
 #X obj 114 345 / 2;
 #X text 34 34 synchronous granular playing with pitch-shift;
 #X obj 239 92 nbx 5 14 -1e+37 1e+37 0 0 empty empty pitch-shift_(halftones)
@@ -35,7 +35,7 @@
 #X text 176 376 attack sustain decay delay;
 #X obj 416 295 wnd-lin \$0-wnd 1024;
 #X text 414 14 grrrr.org \, 2012;
-#N canvas 370 771 532 478 playcorr 0;
+#N canvas 824 590 532 478 playcorr 0;
 #X obj 49 401 outlet;
 #X obj 49 366 f;
 #X obj 250 99 +;
@@ -61,21 +61,18 @@
 #X text 424 29 speed;
 #X text 162 384 samples;
 #X msg 49 144 0 0;
-#X floatatom 195 427 5 0 0 0 - - -;
-#X floatatom 49 424 8 0 0 0 - - -;
-#X obj 49 325 t b b;
 #X obj 156 367 f;
 #X obj 49 203 upp.delay;
 #X obj 239 43 inlet;
 #X obj 125 45 inlet;
 #X text 122 25 playpos;
 #X text 237 25 last grain;
+#X obj 49 325 t b b b;
 #X connect 1 0 0 0;
-#X connect 1 0 24 0;
 #X connect 2 0 7 0;
-#X connect 2 0 27 0;
+#X connect 2 0 24 0;
 #X connect 3 0 1 1;
-#X connect 4 0 25 0;
+#X connect 4 0 29 0;
 #X connect 5 0 6 0;
 #X connect 5 1 4 1;
 #X connect 6 0 22 0;
@@ -84,18 +81,17 @@
 #X connect 13 0 3 0;
 #X connect 13 1 2 0;
 #X connect 13 2 2 1;
-#X connect 13 4 27 2;
+#X connect 13 4 24 2;
 #X connect 17 0 5 0;
 #X connect 19 0 8 0;
-#X connect 22 0 27 0;
-#X connect 25 0 1 0;
-#X connect 25 1 26 0;
-#X connect 26 0 14 0;
-#X connect 26 0 23 0;
-#X connect 27 0 4 0;
-#X connect 27 1 26 1;
-#X connect 28 0 13 0;
-#X connect 29 0 3 0;
+#X connect 22 0 24 0;
+#X connect 23 0 14 0;
+#X connect 24 0 4 0;
+#X connect 24 1 23 1;
+#X connect 25 0 13 0;
+#X connect 26 0 3 0;
+#X connect 29 0 1 0;
+#X connect 29 1 23 0;
 #X restore 42 169 pd playcorr;
 #X obj 20 278 print;
 #X obj 40 376 pack 0 100 0 100 0;
@@ -103,6 +99,8 @@
 1024;
 #X obj 90 144 r \$0-lastgrain;
 #X msg 58 144 0;
+#X obj 23 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 2 0 6 0;
 #X connect 3 1 4 0;
 #X connect 4 0 32 0;
@@ -130,3 +128,4 @@
 #X connect 30 2 10 0;
 #X connect 31 0 27 2;
 #X connect 32 0 27 1;
+#X connect 33 0 29 0;
