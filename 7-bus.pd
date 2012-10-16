@@ -1,0 +1,56 @@
+#N canvas 700 66 675 530 10;
+#X obj 39 480 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
+#X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
+-1 -1 0 1;
+#X obj 39 167 *;
+#X text 137 187 position in buffer(ms);
+#X text 161 252 attack sustain decay;
+#X text 375 192 half window for one grain;
+#X floatatom 117 223 5 0 0 0 - - -;
+#X text 299 102 0...1;
+#X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 375 88 sample \$0-sample;
+#X obj 39 421 list prepend \$0-sample;
+#X obj 39 253 pack 0 100 0 100;
+#X text 160 222 change attack+decay;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 34 granular scrubbing through audio buffer;
+#X floatatom 336 475 5 0 0 0 voices_active - -;
+#X obj 378 214 wnd-sin \$0-wnd 1024;
+#X obj 402 451 out-stereo;
+#X obj 39 292 t a b;
+#X obj 402 426 catch~ \$0-bus-1;
+#X obj 535 426 catch~ \$0-bus-2;
+#X text 159 295 random panning;
+#X text 414 14 grrrr.org \, 2012;
+#X text 182 421 this is the tag;
+#X obj 39 381 list prepend;
+#X obj 108 293 random 2;
+#X obj 108 336 list prepend \$0;
+#X msg 108 358 symbol \$1-bus-\$2;
+#X obj 108 315 + 1;
+#X text 218 358 \$0-bus-1 or \$0-bus-2;
+#X text 122 381 prepend bus name;
+#X obj 39 450 upp.xc 20 spat-varbus syn-grain \$0-wnd 1024;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 6 0 11 1;
+#X connect 6 0 11 3;
+#X connect 8 0 11 0;
+#X connect 9 0 2 1;
+#X connect 10 0 31 0;
+#X connect 11 0 18 0;
+#X connect 18 0 24 0;
+#X connect 18 1 25 0;
+#X connect 19 0 17 0;
+#X connect 20 0 17 1;
+#X connect 24 0 10 0;
+#X connect 25 0 28 0;
+#X connect 26 0 27 0;
+#X connect 27 0 24 1;
+#X connect 28 0 26 0;
+#X connect 31 0 0 0;
+#X connect 31 2 15 0;

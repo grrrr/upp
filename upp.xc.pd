@@ -1,4 +1,4 @@
-#N canvas 96 78 889 269 10;
+#N canvas 140 78 889 269 10;
 #X obj 69 38 inlet;
 #X obj 69 195 outlet;
 #X obj 142 195 outlet;
@@ -14,7 +14,7 @@
 ;
 #X obj 559 127 t b;
 #X text 151 120 dynamically created voices;
-#N canvas 0 22 1425 852 voices 0;
+#N canvas 94 219 1425 852 voices 0;
 #X obj 37 26 inlet;
 #X obj 113 25 inlet;
 #X obj 195 25 outlet;

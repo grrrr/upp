@@ -1,8 +1,8 @@
-#N canvas 194 172 622 527 10;
+#N canvas 756 134 622 527 10;
 #X text 399 268 half window for one grain;
 #X obj 96 347 moses;
 #X obj 144 347 spigot;
-#X obj 339 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
+#X obj 339 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 1
 1;
 #X obj 445 448 out-mono;
 #X obj 327 180 sample \$0-sample;
@@ -12,10 +12,10 @@
 #X obj 35 417 list prepend \$0-sample;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
+#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
 ;
 #X obj 179 125 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 1.00073 256;
+-1 -1 1 256;
 #X text 34 34 synchronous granular playing through audio buffer;
 #X obj 182 107 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
 -204786 -1 -1 8468 1;
@@ -24,13 +24,13 @@
 #X text 414 14 grrrr.org \, 2012;
 #X obj 214 418 list prepend \$0-sample;
 #X obj 100 109 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
-10 -204786 -1 -1 100 256;
+10 -204786 -1 -1 509.368 256;
 #X obj 100 129 / 2;
 #X msg 57 179 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
--8 0 10 -262144 -1 -1 0 256;
+-8 0 10 -262144 -1 -1 3056.21 256;
 #X text 182 418 tag;
-#N canvas 1826 44 603 538 play 0;
+#N canvas 997 44 603 538 play 0;
 #X obj 63 448 outlet;
 #X text 257 150 attack+sustain;
 #X obj 63 60 inlet;

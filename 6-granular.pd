@@ -1,8 +1,8 @@
-#N canvas 104 147 668 428 10;
+#N canvas 86 244 668 428 10;
 #X obj 39 385 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 0 1;
+-1 -1 14600 1;
 #X obj 39 173 *;
 #X text 142 195 position in buffer(ms);
 #X text 161 279 attack sustain decay;
@@ -10,7 +10,7 @@
 #X floatatom 117 242 5 0 0 0 - - -;
 #X text 299 102 0...1;
 #X obj 39 195 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 8421.9 256;
 #X obj 438 357 out-mono;
 #X obj 376 88 sample \$0-sample;
 #X obj 39 316 list prepend \$0-sample;
