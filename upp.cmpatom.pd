@@ -8,8 +8,8 @@
 #X msg 260 100 0;
 #X msg 309 101 1;
 #X msg 155 202 0;
-#X obj 64 75 dilemma;
-#X obj 110 99 dilemma;
+#X obj 64 75 upp.dilemma;
+#X obj 110 99 upp.dilemma;
 #X obj 176 158 select s;
 #X msg 102 201 1;
 #X obj 64 158 select 0;

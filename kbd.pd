@@ -120,7 +120,7 @@
 #X obj 142 149 t b a a;
 #X obj 63 31 inlet;
 #X obj 63 56 unpack;
-#X obj 63 85 dilemma;
+#X obj 63 85 upp.dilemma;
 #X obj 63 397 outlet;
 #X obj 142 296 list append;
 #X msg 63 328 symbol;
@@ -196,7 +196,7 @@ checking if there is any close follow-up key-down of the same key.
 #X text 294 396 check if old and new match;
 #X text 254 293 new;
 #X text 377 294 old;
-#X obj 37 359 dilemma;
+#X obj 37 359 upp.dilemma;
 #X text 45 92 It is sufficient to delay key-up messages only \, therefore
 let pass unfiltered key-downs to avoid unnecessary latency.;
 #X obj 37 500 list;

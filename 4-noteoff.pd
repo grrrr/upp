@@ -13,7 +13,7 @@
 #X text 414 14 grrrr.org \, 2012;
 #X floatatom 36 150 5 0 0 1 MIDI_note - -;
 #X obj 36 125 unpack;
-#X obj 36 203 dilemma;
+#X obj 36 203 upp.dilemma;
 #X obj 75 181 == 0;
 #X obj 36 363 upp.flow spat-mono \$0-bus note_off;
 #X obj 36 385 upp.flow spat-mono \$0-bus note_off;

@@ -15,16 +15,15 @@
 #X obj 110 26 inlet;
 #X obj 197 26 outlet;
 #X obj 267 25 outlet;
-#X restore 152 109 pd root;
+#X restore 156 109 pd root;
 #X msg 429 177 \; pd-root loadbang;
 #X text 428 209 explicit loadbang after everything has been set up
 ;
 #X obj 429 63 t b b;
 #X obj 402 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 150 128 dynamically created voices;
+#X text 154 128 dynamically created voices;
 #X text 454 122 two-level dynamic patch generation;
-#X obj 69 110 upp.xhelper;
 #X text 655 31 grrrr.org 2012;
 #N canvas 335 116 610 470 populate 0;
 #X obj 54 33 inlet;
@@ -56,20 +55,20 @@
 #X obj 292 40 inlet;
 #X text 295 22 pre-creation;
 #X text 49 28 post-creation;
+#X msg 51 91 list c_\$1 v_\$1;
+#X msg 292 89 pd c_\$1;
 #X msg 51 148 \; pd-\$1 vis 0 \; pd-\$1 obj 10 10 inlet \; pd-\$1 obj
 100 10 inlet \; pd-\$1 obj 200 10 outlet \; pd-\$1 obj 300 10 outlet
-\; pd-\$1 obj 30 100 upp.xhelper \; pd-\$1 obj 130 100 pd \$2 \; pd-\$2
+\; pd-\$1 obj 30 100 upp._xhelper \; pd-\$1 obj 130 100 pd \$2 \; pd-\$2
 vis 0 \; pd-\$1 connect 0 0 4 0 \; pd-\$1 connect 1 0 4 1 \; pd-\$1
 connect 4 0 2 0 \; pd-\$1 connect 4 1 3 0 \; pd-\$2 obj 10 10 inlet
 \; pd-\$2 obj 100 10 inlet \; pd-\$2 obj 200 10 outlet \; pd-\$2 obj
 300 10 outlet \; pd-\$1 connect 4 3 5 0 \; pd-\$1 connect 4 4 5 1 \;
 pd-\$1 connect 5 0 4 2 \; pd-\$1 connect 5 1 4 3 \;;
-#X msg 51 91 list c_\$1 v_\$1;
-#X msg 292 89 pd c_\$1;
-#X connect 0 0 6 0;
-#X connect 2 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 1 0;
+#X connect 0 0 5 0;
+#X connect 2 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 1 0;
 #X restore 521 418 pd sub;
 #X obj 142 418 list append upp.flow \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9
 ;
@@ -103,17 +102,18 @@ pd-\$1 connect 5 0 4 2 \; pd-\$1 connect 5 1 4 3 \;;
 #X connect 16 0 7 0;
 #X connect 16 1 7 1;
 #X restore 456 103 pd populate;
-#X connect 0 0 18 0;
-#X connect 5 0 18 1;
+#X obj 69 110 upp._xhelper;
+#X connect 0 0 20 0;
+#X connect 5 0 20 1;
 #X connect 10 0 14 0;
-#X connect 11 0 18 2;
-#X connect 11 1 18 3;
+#X connect 11 0 20 2;
+#X connect 11 1 20 3;
 #X connect 14 0 12 0;
-#X connect 14 1 20 0;
+#X connect 14 1 19 0;
 #X connect 15 0 14 0;
-#X connect 18 0 1 0;
-#X connect 18 1 2 0;
-#X connect 18 2 7 0;
-#X connect 18 3 11 0;
-#X connect 18 4 11 1;
+#X connect 20 0 1 0;
+#X connect 20 1 2 0;
+#X connect 20 2 7 0;
+#X connect 20 3 11 0;
+#X connect 20 4 11 1;
 #X coords 0 0 1 1 100 50 0;

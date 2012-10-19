@@ -36,9 +36,9 @@
 #X obj 644 374 inlet release;
 #X obj 506 332 outlet event_msg;
 #X obj 643 330 outlet mod_msg;
-#X obj 135 143 dilemma;
 #X text 648 21 grrrr.org 2012;
-#X connect 0 0 34 0;
+#X obj 135 143 upp.dilemma;
+#X connect 0 0 35 0;
 #X connect 1 0 2 0;
 #X connect 1 1 14 0;
 #X connect 1 1 21 0;
@@ -48,7 +48,7 @@
 #X connect 7 0 8 0;
 #X connect 8 0 12 0;
 #X connect 8 0 26 0;
-#X connect 12 0 34 1;
+#X connect 12 0 35 1;
 #X connect 14 0 12 0;
 #X connect 18 0 33 0;
 #X connect 19 0 18 0;
@@ -63,5 +63,5 @@
 #X connect 26 0 18 1;
 #X connect 30 0 1 0;
 #X connect 31 0 4 0;
-#X connect 34 0 24 0;
-#X connect 34 1 2 0;
+#X connect 35 0 24 0;
+#X connect 35 1 2 0;

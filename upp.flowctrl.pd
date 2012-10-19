@@ -18,7 +18,7 @@
 #X text 262 134 set busy;
 #X text 188 293 to worker;
 #X text 65 16 message in;
-#X obj 117 149 dilemma;
+#X obj 117 149 upp.dilemma;
 #X text 189 18 busy flag;
 #X text 335 17 grrrr.org 2012;
 #X connect 0 0 17 0;
