@@ -2,7 +2,7 @@
 #X text 146 202 position in buffer(ms);
 #X text 416 276 half window for one grain;
 #X obj 42 202 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1600 256;
+-262144 -1 -1 12453.9 256;
 #X obj 131 235 moses;
 #X obj 159 257 spigot;
 #X obj 188 126 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 1
@@ -20,9 +20,9 @@
 #X obj 42 97 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
 ;
 #X obj 88 110 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 1 256;
+-1 -1 1.00073 256;
 #X obj 91 92 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10 -204786
--1 -1 8467 1;
+-1 -1 8468 1;
 #X obj 114 326 nbx 5 14 0.1 1000 1 1 empty empty grain_length 0 -8
 0 10 -204786 -1 -1 100 256;
 #X obj 114 345 / 2;
@@ -45,7 +45,7 @@
 #X obj 49 119 sel 1;
 #X obj 250 232 * 1;
 #X obj 426 157 nbx 5 14 0 1000 0 0 empty empty speed 0 -8 0 10 -262144
--1 -1 1 256;
+-1 -1 1.00073 256;
 #X text 248 249 time increment;
 #X text 214 115 attack+sustain;
 #X text 251 214 scale delay time;
@@ -98,7 +98,7 @@
 #X msg 58 144 0;
 #X obj 23 334 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 40 480 upp.xc 100 spat-mono \$0-bus syn-grain-varcorr \$0-wnd
+#X obj 40 480 upp.xc 50 spat-mono \$0-bus syn-grain-varcorr \$0-wnd
 1024;
 #X connect 2 0 6 0;
 #X connect 3 1 4 0;

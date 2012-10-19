@@ -22,7 +22,7 @@
 #X obj 343 111 t b a;
 #X obj 475 236 pack 0 0;
 #X obj 255 305 tabread4~;
-#N canvas 415 725 321 273 ramp 1;
+#N canvas 415 725 321 273 ramp 0;
 #X obj 36 78 inlet;
 #X obj 174 79 inlet;
 #X obj 36 226 outlet~;
