@@ -13,7 +13,7 @@
 #X text 402 220 attack;
 #X text 477 221 release;
 #X obj 399 298 tabread4~ \$1;
-#X obj 270 235 ms2samples;
+#X obj 270 235 upp.ms2s;
 #X obj 309 43 inlet;
 #X text 484 19 grrrr.org 2012;
 #X obj 399 236 pack \$2 0;

@@ -24,7 +24,7 @@
 #X text 58 223 total duration;
 #X text 328 43 L<<<<<R;
 #X obj 399 298 tabread4~ \$1;
-#X obj 245 225 ms2samples;
+#X obj 245 225 upp.ms2s;
 #X obj 518 47 inlet;
 #X text 515 66 dummy;
 #X text 477 17 grrrr.org 2012;

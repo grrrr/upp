@@ -5,7 +5,7 @@
 #X obj 50 66 route bang float;
 #X text 121 165 safety;
 #X obj 96 92 t a b;
-#X obj 123 138 samples2ms;
+#X obj 123 138 upp.s2ms;
 #X obj 96 166 +;
 #X msg 123 114 65;
 #X text 149 115 1 DSP block + 1 sample;
