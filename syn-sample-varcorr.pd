@@ -1,9 +1,9 @@
-#N canvas 747 266 626 423 10;
+#N canvas 1658 561 626 423 10;
 #X obj 62 42 inlet;
 #X obj 255 375 outlet~;
 #X obj 255 350 *~;
 #X obj 63 371 outlet;
-#X obj 62 87 list split 1;
+#X obj 62 98 list split 1;
 #X obj 218 184 cnv 15 120 150 empty empty play_sample 20 12 0 14 -233017
 -66577 0;
 #X msg 223 279 set \$1;
@@ -16,7 +16,7 @@
 #X obj 280 256 upp.ms2s;
 #X obj 309 43 inlet;
 #X text 485 8 grrrr.org 2012;
-#X obj 309 89 list split 1;
+#X obj 309 100 list split 1;
 #X obj 475 201 t b a;
 #X obj 255 305 tabread4~;
 #N canvas 340 548 278 266 ramp 0;
@@ -34,19 +34,19 @@
 #X connect 7 0 4 0;
 #X restore 279 278 pd ramp;
 #X obj 399 201 t b a;
-#X obj 309 66 upp.once;
-#X obj 62 65 t a b;
-#X obj 96 109 unpack 0 0 0 0;
+#X obj 309 70 upp.once;
+#X obj 62 69 t a b;
+#X obj 96 135 unpack 0 0 0 0;
 #X text 59 8 sample_buffer delay(samples) playpos(ms) attack(ms) speed
 ;
 #X text 307 27 sample_buffer delay(samples) release(ms);
-#X obj 343 110 unpack 0 0;
+#X obj 343 136 unpack 0 0;
 #X obj 399 236 pack \$2 0 0;
 #X obj 475 236 pack 0 0 0;
 #X obj 309 227 *;
 #X obj 280 235 -;
-#X obj 224 109 upp.s2ms;
-#X obj 432 110 upp.s2ms;
+#X obj 224 135 upp.s2ms;
+#X obj 432 136 upp.s2ms;
 #X connect 0 0 21 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;

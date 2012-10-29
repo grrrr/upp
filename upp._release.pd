@@ -1,4 +1,4 @@
-#N canvas 154 437 333 274 10;
+#N canvas 185 532 333 274 10;
 #X obj 50 36 inlet;
 #X obj 50 222 outlet;
 #X obj 96 189 delay;
@@ -7,14 +7,14 @@
 #X obj 96 92 t a b;
 #X obj 123 138 upp.s2ms;
 #X obj 96 166 +;
-#X msg 123 114 65;
-#X text 149 115 1 DSP block + 1 sample;
+#X text 149 115 2 DSP blocks - 1 sample;
+#X msg 123 114 127;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 3 0 1 0;
 #X connect 3 1 5 0;
 #X connect 5 0 7 0;
-#X connect 5 1 8 0;
+#X connect 5 1 9 0;
 #X connect 6 0 7 1;
 #X connect 7 0 2 0;
-#X connect 8 0 6 0;
+#X connect 9 0 6 0;
