@@ -1,4 +1,4 @@
-#N canvas 59 699 622 527 10;
+#N canvas 41 175 622 527 10;
 #X text 399 268 half window for one grain;
 #X obj 96 347 moses;
 #X obj 144 347 spigot;
@@ -29,7 +29,7 @@
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
 -8 0 10 -262144 -1 -1 0 256;
 #X text 182 418 tag;
-#N canvas 997 44 603 538 play 0;
+#N canvas 488 379 603 538 play 0;
 #X obj 63 448 outlet;
 #X text 257 150 attack+sustain;
 #X obj 63 60 inlet;
@@ -54,10 +54,11 @@
 #X obj 289 272 * 1;
 #X obj 495 102 t b a;
 #X text 287 289 playpos increment;
-#X obj 249 312 +;
+#X obj 204 337 +;
 #X obj 63 295 upp.onward;
 #X obj 78 103 sel 0;
 #X obj 63 359 t a a b;
+#X obj 63 325 f;
 #X connect 2 0 25 0;
 #X connect 2 0 26 0;
 #X connect 3 0 22 0;
@@ -69,18 +70,19 @@
 #X connect 13 0 7 1;
 #X connect 17 0 19 0;
 #X connect 17 1 19 1;
-#X connect 18 0 25 1;
+#X connect 18 0 28 1;
 #X connect 19 0 21 0;
-#X connect 19 0 25 2;
+#X connect 19 0 25 1;
 #X connect 21 0 24 1;
 #X connect 22 0 21 0;
 #X connect 22 1 21 1;
-#X connect 24 0 25 1;
-#X connect 25 0 27 0;
+#X connect 24 0 28 1;
+#X connect 25 0 28 0;
 #X connect 26 0 7 0;
 #X connect 27 0 10 0;
 #X connect 27 1 24 0;
 #X connect 27 2 7 0;
+#X connect 28 0 27 0;
 #X restore 35 202 pd play ___________;
 #X obj 35 230 t a a;
 #X obj 35 451 upp.xc 10 spat-mono \$0-bus syn-sample \$0-wnd 1024;
