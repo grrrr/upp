@@ -1,4 +1,4 @@
-#N canvas 52 88 600 529 10;
+#N canvas 885 102 600 529 10;
 #X text 399 268 half window for one grain;
 #X obj 96 321 moses;
 #X obj 158 321 spigot;
