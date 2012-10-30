@@ -1,0 +1,10 @@
+#N canvas 10 22 200 200 10;
+#N canvas 20 22 420 300 META 0;
+#X text 10 10 META this is a prototype of a libdir meta file;
+#X text 10 110 VERSION 0.1;
+#X text 10 30 NAME upp;
+#X text 10 90 LICENSE CC-BY-SA;
+#X text 10 70 DESCRIPTION Universal polyphonic player (grrrr.org/upp)
+;
+#X text 10 50 AUTHOR Thomas Grill;
+#X restore 10 10 pd META;
