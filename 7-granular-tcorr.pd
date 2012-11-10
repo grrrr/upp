@@ -1,8 +1,8 @@
-#N canvas 885 102 600 529 10;
+#N canvas 34 71 600 529 10;
 #X text 399 268 half window for one grain;
 #X obj 96 321 moses;
 #X obj 158 321 spigot;
-#X obj 340 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
+#X obj 340 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 1
 1;
 #X obj 308 185 sample \$0-sample;
 #X obj 35 484 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
@@ -10,7 +10,7 @@
 #X floatatom 354 482 5 0 0 0 voices_active - -;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
+#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
 ;
 #X obj 179 125 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
 -1 -1 1.00018 256;
@@ -23,7 +23,7 @@
 #X obj 100 129 / 2;
 #X msg 58 180 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
--8 0 10 -262144 -1 -1 0 256;
+-8 0 10 -262144 -1 -1 1750.32 256;
 #X text 189 410 tag;
 #N canvas 190 125 603 538 play 0;
 #X obj 63 448 outlet;

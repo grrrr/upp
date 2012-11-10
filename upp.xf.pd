@@ -10,13 +10,10 @@
 #X text 204 213 voices active;
 #X text 67 20 event message;
 #X obj 430 19 loadbang;
-#X text 428 224 explicit loadbang after everything has been set up
+#X text 428 230 explicit loadbang after everything has been set up
 ;
 #X text 217 121 dynamically created voices;
-#N canvas 638 110 476 743 voices 0;
-#X restore 220 103 pd voices;
 #X obj 430 51 t b b;
-#X msg 430 192 \; pd-voices loadbang;
 #X obj 558 160 list append \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
 #X obj 558 116 pack 0 \$0;
 #N canvas 15 27 871 725 comm 0;
@@ -28,7 +25,7 @@
 #X obj 153 571 t a;
 #X msg 153 533 -1;
 #X obj 118 608 nbx 5 14 -1e+37 1e+37 0 0 empty empty active 0 -8 0
-10 -262144 -1 -1 0 256;
+10 -262144 -1 -1 9 256;
 #X text 360 38 modulation message;
 #X msg 118 534 1;
 #X obj 118 570 +;
@@ -260,18 +257,23 @@
 #X obj 457 149 upp.dynchain;
 #X msg 558 138 upp.comm UPP-\$2 \$1;
 #X text 684 19 grrrr.org 2012;
-#X obj 457 76 list append \$1 voices 0;
-#X connect 0 0 18 0;
-#X connect 5 0 18 1;
-#X connect 10 0 14 0;
-#X connect 14 0 15 0;
-#X connect 14 1 22 0;
-#X connect 16 0 19 1;
-#X connect 17 0 20 0;
-#X connect 18 0 1 0;
-#X connect 18 1 2 0;
-#X connect 18 2 7 0;
-#X connect 19 1 17 0;
-#X connect 20 0 16 0;
-#X connect 22 0 19 0;
+#N canvas 638 110 476 743 \$0-voices 0;
+#X restore 220 103 pd \$0-voices;
+#X obj 430 177 f \$0;
+#X msg 430 198 \; pd-\$1-voices loadbang;
+#X obj 457 76 list append \$1 \$0-voices 0;
+#X connect 0 0 16 0;
+#X connect 5 0 16 1;
+#X connect 10 0 13 0;
+#X connect 13 0 21 0;
+#X connect 13 1 23 0;
+#X connect 14 0 17 1;
+#X connect 15 0 18 0;
+#X connect 16 0 1 0;
+#X connect 16 1 2 0;
+#X connect 16 2 7 0;
+#X connect 17 1 15 0;
+#X connect 18 0 14 0;
+#X connect 21 0 22 0;
+#X connect 23 0 17 0;
 #X coords 0 0 1 1 100 50 0;
