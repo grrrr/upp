@@ -1,4 +1,5 @@
 #N canvas 95 306 557 463 10;
+#X declare -path .;
 #X floatatom 53 161 5 0 0 1 MIDI_note - -;
 #X obj 53 80 kbd;
 #X obj 53 404 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
@@ -14,6 +15,8 @@
 #X obj 308 357 out-mono;
 #X obj 308 327 catch~ \$0-bus;
 #X text 414 14 grrrr.org \, 2012;
+#X obj 405 83 declare -path .;
+#X text 403 99 to find voice patch;
 #X obj 53 222 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 244 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 266 upp.flow spat-mono \$0-bus note_alt;
@@ -22,17 +25,17 @@
 #X obj 53 332 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 354 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 376 upp.flow spat-mono \$0-bus note_alt;
-#X connect 0 0 11 0;
+#X connect 0 0 13 0;
 #X connect 1 0 4 0;
 #X connect 4 0 5 0;
 #X connect 4 1 5 1;
 #X connect 5 0 0 0;
 #X connect 9 0 8 0;
-#X connect 11 0 12 0;
-#X connect 12 0 13 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 2 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 2 0;

@@ -1,4 +1,5 @@
 #N canvas 34 71 600 529 10;
+#X declare -path .;
 #X text 399 268 half window for one grain;
 #X obj 96 321 moses;
 #X obj 158 321 spigot;
@@ -23,7 +24,7 @@
 #X obj 100 129 / 2;
 #X msg 58 180 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
--8 0 10 -262144 -1 -1 1750.32 256;
+-8 0 10 -262144 -1 -1 3500.63 256;
 #X text 189 410 tag;
 #N canvas 190 125 603 538 play 0;
 #X obj 63 448 outlet;
@@ -93,6 +94,8 @@
 #X obj 35 230 t a a;
 #X obj 427 431 catch~ \$0-bus;
 #X obj 428 457 out-mono;
+#X obj 443 105 declare -path .;
+#X text 441 121 to find voice patch;
 #X obj 35 452 upp.xc 10 spat-mono \$0-bus syn-sample-varcorr \$0-wnd
 1024;
 #X connect 1 1 2 0;
@@ -112,10 +115,10 @@
 #X connect 19 0 20 0;
 #X connect 20 0 21 1;
 #X connect 21 0 22 0;
-#X connect 22 0 28 0;
-#X connect 24 0 28 1;
+#X connect 22 0 30 0;
+#X connect 24 0 30 1;
 #X connect 25 0 16 0;
 #X connect 25 1 21 0;
 #X connect 26 0 27 0;
-#X connect 28 0 5 0;
-#X connect 28 2 6 0;
+#X connect 30 0 5 0;
+#X connect 30 2 6 0;

@@ -1,4 +1,5 @@
 #N canvas 64 53 551 520 10;
+#X declare -path .;
 #X floatatom 66 169 5 0 0 1 MIDI_note - -;
 #X obj 66 459 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
@@ -8,7 +9,7 @@
 #X obj 66 123 unpack;
 #X obj 66 143 spigot;
 #X obj 66 85 kbd;
-#X obj 330 110 out-mono;
+#X obj 368 453 out-mono;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 playing notes with a formant-defined timbre;
@@ -97,8 +98,10 @@
 #X text 50 263 |;
 #X text 50 276 |;
 #X floatatom 297 458 5 0 0 0 voices_active - -;
-#X obj 330 86 catch~ \$0-bus;
+#X obj 368 429 catch~ \$0-bus;
 #X text 414 14 grrrr.org \, 2012;
+#X obj 408 81 declare -path .;
+#X text 406 97 to find voice patch;
 #X obj 66 431 upp.xc 50 spat-mono \$0-bus note_alt_vol;
 #X connect 0 0 3 0;
 #X connect 3 0 11 0;
@@ -106,7 +109,7 @@
 #X connect 5 1 6 1;
 #X connect 6 0 0 0;
 #X connect 7 0 5 0;
-#X connect 11 0 20 0;
+#X connect 11 0 22 0;
 #X connect 18 0 8 0;
-#X connect 20 0 1 0;
-#X connect 20 2 17 0;
+#X connect 22 0 1 0;
+#X connect 22 2 17 0;

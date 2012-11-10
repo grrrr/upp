@@ -1,4 +1,5 @@
 #N canvas 109 94 622 527 10;
+#X declare -path .;
 #X text 399 268 half window for one grain;
 #X obj 96 347 moses;
 #X obj 144 347 spigot;
@@ -89,19 +90,21 @@
 0 -8 0 10 -204786 -1 -1 0 256;
 #X obj 234 386 expr pow(2 \, $f1/12);
 #X obj 35 388 list append 1;
+#X obj 399 287 wnd-lin \$0-wnd 1024;
+#X obj 460 104 declare -path .;
+#X text 458 120 to find voice patch;
 #X obj 35 451 upp.xc 10 spat-mono \$0-bus syn-sample-var \$0-wnd 1024
 ;
-#X obj 399 287 wnd-lin \$0-wnd 1024;
 #X connect 1 1 2 0;
 #X connect 2 0 19 0;
 #X connect 3 0 2 1;
 #X connect 5 0 1 1;
-#X connect 8 0 27 0;
+#X connect 8 0 30 0;
 #X connect 10 0 22 0;
 #X connect 11 0 22 5;
 #X connect 13 0 11 0;
 #X connect 14 0 4 0;
-#X connect 16 0 27 1;
+#X connect 16 0 30 1;
 #X connect 17 0 18 0;
 #X connect 18 0 22 2;
 #X connect 18 0 22 4;
@@ -114,5 +117,5 @@
 #X connect 24 0 25 0;
 #X connect 25 0 26 1;
 #X connect 26 0 8 0;
-#X connect 27 0 6 0;
-#X connect 27 2 7 0;
+#X connect 30 0 6 0;
+#X connect 30 2 7 0;
