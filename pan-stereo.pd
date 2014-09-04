@@ -1,4 +1,4 @@
-#N canvas 75 404 565 400 10;
+#N canvas 75 404 623 365 10;
 #X obj 53 67 inlet~;
 #X obj 206 66 inlet;
 #X obj 52 306 outlet~;
@@ -8,10 +8,14 @@
 #X text 200 50 -1...+1;
 #X obj 358 57 loadbang;
 #X obj 358 78 expr asin(1)/2;
-#X text 472 79 pi/4;
+#X text 453 75 pi/4;
 #X obj 188 210 expr sin((1-$f1)*$f2);
 #X obj 359 209 expr sin((1+$f1)*$f2);
 #X text 417 27 grrrr.org 2012;
+#X obj 546 77 inlet;
+#X text 547 60 gain;
+#X obj 358 155 * 1;
+#X obj 430 157 t b a;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;
@@ -19,7 +23,11 @@
 #X connect 4 0 2 0;
 #X connect 5 0 3 0;
 #X connect 7 0 8 0;
-#X connect 8 0 10 1;
-#X connect 8 0 11 1;
+#X connect 8 0 15 0;
 #X connect 10 0 4 1;
 #X connect 11 0 5 1;
+#X connect 13 0 16 0;
+#X connect 15 0 10 1;
+#X connect 15 0 11 1;
+#X connect 16 0 15 0;
+#X connect 16 1 15 1;
