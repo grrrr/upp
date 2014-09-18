@@ -1,4 +1,4 @@
-#N canvas 676 208 453 340 10;
+#N canvas 65 65 453 340 10;
 #X obj 37 41 inlet;
 #X obj 89 302 outlet~;
 #X obj 37 88 list split 1;
@@ -8,7 +8,7 @@
 #X obj 113 181 upp.ms2s;
 #X obj 316 43 inlet;
 #X obj 89 253 tabread4~;
-#N canvas 356 418 385 267 ramp 0;
+#N canvas 308 217 385 267 ramp 0;
 #X obj 38 74 inlet;
 #X obj 137 74 inlet;
 #X obj 38 224 outlet~;
