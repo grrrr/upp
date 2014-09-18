@@ -19,6 +19,7 @@
 #X obj 59 266 dac~ 1 2 3 4;
 #X obj 134 227 *~ 0;
 #X obj 172 227 *~ 0;
+#X obj 402 28 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 15 0;
 #X connect 2 0 1 1;
@@ -40,4 +41,5 @@
 #X connect 14 0 17 0;
 #X connect 16 0 15 2;
 #X connect 17 0 15 3;
+#X connect 18 0 4 0;
 #X coords 0 -1 1 1 140 40 2 300 80;

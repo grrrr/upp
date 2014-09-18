@@ -5,9 +5,9 @@
 #X obj 60 203 dac~;
 #X text 97 206 audio out;
 #X obj 202 84 nbx 4 16 -100 27 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 -20 256;
+-1 -1 -17.7165 256;
 #X obj 205 102 hsl 128 16 -50 0 0 0 empty empty gain(dB) 75 -8 0 10
--204786 -1 -1 7620 1;
+-204786 -1 -1 8200 1;
 #X msg 360 153 set \$1;
 #X msg 359 133 set \$1;
 #X obj 202 134 + 100;
@@ -15,6 +15,7 @@
 #X msg 273 52 -20;
 #X obj 101 31 inlet~;
 #X obj 101 153 *~ 0;
+#X obj 158 30 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
@@ -30,4 +31,5 @@
 #X connect 11 0 5 0;
 #X connect 12 0 13 0;
 #X connect 13 0 3 1;
+#X connect 14 0 5 0;
 #X coords 0 -1 1 1 140 40 2 200 80;
