@@ -1,0 +1,35 @@
+#N canvas 551 464 608 290 10;
+#X text 213 178 explicit loadbang after everything has been set up
+;
+#N canvas 117 188 525 431 \$0-dynsub 0;
+#X obj 10 6 inlet;
+#X obj 10 404 outlet;
+#X restore 27 135 pd \$0-dynsub;
+#X obj 153 26 inlet;
+#X obj 27 27 inlet;
+#X obj 27 248 outlet;
+#X obj 182 250 upp.fwd;
+#X obj 182 228 list prepend pd-\$0-dynsub;
+#X msg 153 177 loadbang;
+#X obj 153 64 t b b a b;
+#X text 373 154 connect inlet and outlet;
+#X msg 170 153 connect 0 0 2 0 \, connect 2 0 1 0;
+#X obj 187 128 list prepend obj 10 30;
+#X text 330 128 create object;
+#X text 429 67 delete existing object;
+#X msg 204 89 vis 1 \, editmode 1 \, mouse 0 25 0 0 \, mouseup 1000
+200 0 \, cut \, editmode 0 \, vis 0;
+#X text 230 31 with one inlet and one outlet;
+#X text 230 17 create dynamically allocated object per message;
+#X connect 1 0 4 0;
+#X connect 2 0 8 0;
+#X connect 3 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 8 1 10 0;
+#X connect 8 2 11 0;
+#X connect 8 3 14 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 14 0 6 0;

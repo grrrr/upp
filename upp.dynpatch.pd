@@ -1,4 +1,4 @@
-#N canvas 0 22 555 353 10;
+#N canvas 562 83 617 353 10;
 #X obj 186 51 loadbang;
 #X text 184 290 explicit loadbang after everything has been set up
 ;
@@ -13,6 +13,8 @@
 #X text 306 216 index;
 #X text 308 141 object to create (list);
 #X obj 213 111 list append \$1 \$0-dynsub 0;
+#X text 276 31 create dynamically allocated object per message;
+#X text 276 45 with no inlets and outlets;
 #X connect 0 0 4 0;
 #X connect 2 1 7 0;
 #X connect 3 0 6 0;
