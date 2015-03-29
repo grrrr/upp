@@ -1,4 +1,4 @@
-#N canvas 614 417 889 269 10;
+#N canvas 26 43 889 269 10;
 #X obj 69 38 inlet;
 #X obj 69 195 outlet;
 #X obj 142 195 outlet;
@@ -18,9 +18,9 @@
 #X obj 558 147 list append upp.flow \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9
 ;
 #X obj 457 136 upp.dynchain;
-#X text 740 27 grrrr.org 2012;
+#X text 741 27 grrrr.org 2012;
 #X obj 69 103 upp._xhelper;
-#N canvas 94 219 384 779 \$0-voices 0;
+#N canvas 94 22 384 700 \$0-voices 0;
 #X obj 37 26 inlet;
 #X obj 113 25 inlet;
 #X obj 195 25 outlet;

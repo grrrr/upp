@@ -1,8 +1,14 @@
-#N canvas 39 43 553 516 10;
-#X declare -path .;
-#X floatatom 47 184 5 0 0 1 MIDI_note - -;
+#N canvas 6 26 559 510 10;
+#X declare -path .. -path .;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 34 playing notes with a formant-defined timbre;
+#X text 403 104 to find voice patch;
+#X obj 379 85 declare -path .. -path .;
+#X text 412 14 grrrr.org \, 2012-15;
+#X floatatom 47 184 5 0 0 1 MIDI_note - -, f 5;
 #X obj 47 89 kbd;
-#X obj 47 465 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+#X obj 47 456 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X text 113 219 partials;
 #N canvas 812 212 637 584 timbre 0;
@@ -29,8 +35,8 @@
 77.1237 77.1237 77.1237 77.1237 77.1237 77.1237 77.1237;
 #X coords 0 100 149 70 300 140 1;
 #X restore 280 35 graph;
-#X floatatom 53 137 5 0 0 0 - - -;
-#X floatatom 171 135 5 0 0 0 - - -;
+#X floatatom 53 137 5 0 0 0 - - -, f 5;
+#X floatatom 171 135 5 0 0 0 - - -, f 5;
 #X obj 54 247 until;
 #X obj 54 203 f;
 #X obj 53 224 t a b;
@@ -85,21 +91,15 @@
 #X coords 0 -1 1 1 300 155 2 280 20;
 #X restore 47 251 pd timbre;
 #X obj 47 218 pack 0 8;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
-10 10 0 14 -233017 -66577 0;
 #X obj 47 131 unpack;
 #X obj 47 152 spigot;
-#X text 34 34 playing notes with a formant-defined timbre;
-#X obj 369 453 out-mono;
+#X obj 375 432 out-mono;
 #X text 248 409 ---> frequency;
 #X text 13 267 gain;
 #X text 31 280 ^;
 #X text 31 285 |;
 #X text 31 298 |;
-#X obj 369 427 catch~ \$0-bus;
-#X text 414 14 grrrr.org \, 2012;
-#X obj 405 87 declare -path .;
-#X text 403 103 to find voice patch;
+#X obj 375 406 catch~ \$0-bus;
 #N canvas 0 22 1314 340 50voices 0;
 #X obj 26 21 inlet;
 #X obj 1046 293 outlet;
@@ -208,12 +208,12 @@
 #X connect 51 0 52 0;
 #X connect 52 0 22 0;
 #X restore 47 429 pd 50voices;
-#X connect 0 0 5 0;
-#X connect 1 0 7 0;
-#X connect 4 0 20 0;
-#X connect 5 0 4 0;
-#X connect 7 0 8 0;
-#X connect 7 1 8 1;
-#X connect 8 0 0 0;
-#X connect 16 0 10 0;
-#X connect 20 0 2 0;
+#X connect 5 0 10 0;
+#X connect 6 0 11 0;
+#X connect 9 0 20 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 12 0 5 0;
+#X connect 19 0 13 0;
+#X connect 20 0 7 0;

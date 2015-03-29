@@ -1,6 +1,12 @@
-#N canvas 64 53 551 520 10;
-#X declare -path .;
-#X floatatom 66 169 5 0 0 1 MIDI_note - -;
+#N canvas 14 28 551 520 10;
+#X declare -path .. -path .;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 34 playing notes with a formant-defined timbre;
+#X text 406 98 to find voice patch;
+#X obj 380 78 declare -path .. -path .;
+#X text 410 14 grrrr.org \, 2012-15;
+#X floatatom 66 169 5 0 0 1 MIDI_note - -, f 5;
 #X obj 66 459 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X text 140 205 partials;
@@ -10,9 +16,6 @@
 #X obj 66 143 spigot;
 #X obj 66 85 kbd;
 #X obj 368 453 out-mono;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
-10 10 0 14 -233017 -66577 0;
-#X text 34 34 playing notes with a formant-defined timbre;
 #N canvas 812 212 637 584 timbre 0;
 #X obj 90 28 inlet;
 #X obj 82 538 outlet;
@@ -37,8 +40,8 @@
 88.5351 88.8208 89.1065 89.3922 89.9279 90.4636 90.6779;
 #X coords 0 100 149 70 300 140 1;
 #X restore 280 35 graph;
-#X floatatom 53 137 5 0 0 0 - - -;
-#X floatatom 171 135 5 0 0 0 - - -;
+#X floatatom 53 137 5 0 0 0 - - -, f 5;
+#X floatatom 171 135 5 0 0 0 - - -, f 5;
 #X obj 54 247 until;
 #X obj 54 203 f;
 #X obj 53 224 t a b;
@@ -97,19 +100,16 @@
 #X text 50 258 ^;
 #X text 50 263 |;
 #X text 50 276 |;
-#X floatatom 297 458 5 0 0 0 voices_active - -;
+#X floatatom 297 458 5 0 0 0 voices_active - -, f 5;
 #X obj 368 429 catch~ \$0-bus;
-#X text 414 14 grrrr.org \, 2012;
-#X obj 408 81 declare -path .;
-#X text 406 97 to find voice patch;
 #X obj 66 431 upp.xc 50 spat-mono \$0-bus note_alt_vol;
-#X connect 0 0 3 0;
-#X connect 3 0 11 0;
-#X connect 5 0 6 0;
-#X connect 5 1 6 1;
-#X connect 6 0 0 0;
-#X connect 7 0 5 0;
-#X connect 11 0 22 0;
-#X connect 18 0 8 0;
-#X connect 22 0 1 0;
-#X connect 22 2 17 0;
+#X connect 5 0 8 0;
+#X connect 8 0 14 0;
+#X connect 10 0 11 0;
+#X connect 10 1 11 1;
+#X connect 11 0 5 0;
+#X connect 12 0 10 0;
+#X connect 14 0 22 0;
+#X connect 21 0 13 0;
+#X connect 22 0 6 0;
+#X connect 22 2 20 0;

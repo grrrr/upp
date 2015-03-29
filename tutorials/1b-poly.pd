@@ -1,0 +1,52 @@
+#N canvas 6 24 559 480 10;
+#X declare -path ..;
+#X obj 27 11 cnv 15 500 40 empty empty Polyphonic_player 10 10 0 14
+-233017 -66577 0;
+#X text 34 32 native Pure Data approach using [poly];
+#X obj 426 68 declare -path ..;
+#X text 411 14 grrrr.org \, 2012-15;
+#X floatatom 70 160 5 0 0 1 MIDI_note - -, f 5;
+#X obj 70 77 kbd;
+#X text 172 85 keyboard;
+#X obj 70 206 pack 0 100;
+#X obj 70 307 note_basic;
+#X obj 91 327 note_basic;
+#X obj 113 347 note_basic;
+#X obj 134 367 note_basic;
+#X obj 70 254 pack;
+#X obj 70 230 poly 4 1;
+#X text 134 230 poly with note-stealing;
+#X obj 74 327 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 96 347 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 117 367 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 70 285 route 1 2 3 4;
+#X obj 53 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 70 115 unpack;
+#X obj 70 134 spigot;
+#X obj 70 403 out-mono;
+#X text 75 442 audio out;
+#X connect 4 0 7 0;
+#X connect 5 0 20 0;
+#X connect 7 0 13 0;
+#X connect 8 0 22 0;
+#X connect 9 0 22 0;
+#X connect 10 0 22 0;
+#X connect 11 0 22 0;
+#X connect 12 0 18 0;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
+#X connect 18 0 8 0;
+#X connect 18 0 19 0;
+#X connect 18 1 9 0;
+#X connect 18 1 15 0;
+#X connect 18 2 10 0;
+#X connect 18 2 16 0;
+#X connect 18 3 11 0;
+#X connect 18 3 17 0;
+#X connect 20 0 21 0;
+#X connect 20 1 21 1;
+#X connect 21 0 4 0;

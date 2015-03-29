@@ -1,4 +1,4 @@
-#N canvas 98 294 602 485 10;
+#N canvas 17 23 602 485 10;
 #X obj 226 44 inlet;
 #X obj 67 404 outlet;
 #X obj 175 252 cnv 15 350 200 empty empty empty 20 12 0 14 -233017
@@ -20,13 +20,13 @@
 #X obj 371 275 *;
 #X msg 319 303 \$2 \$3;
 #X obj 249 164 unpack 0 0 0 0 0 0;
-#X text 75 277 only once!;
+#X text 75 278 only once!;
 #X obj 441 70 list split 1;
 #X text 415 70 tag;
 #X obj 249 404 outlet~;
 #X text 61 20 tag=midinote volume A(ms) D(ms) S(gain) R(ms);
 #X text 49 424 output delay time;
-#X obj 67 259 upp.once;
+#X obj 67 260 upp.once;
 #X connect 0 0 10 0;
 #X connect 3 0 4 0;
 #X connect 4 0 23 0;

@@ -1,28 +1,28 @@
-#N canvas 344 194 560 591 10;
-#X declare -path .;
-#X obj 36 79 kbd;
-#X obj 36 545 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
--1 -1;
+#N canvas 8 22 560 591 10;
+#X declare -path .. -path .;
 #X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 encapsulating abstractions into daisy-chained voices
 ;
+#X text 410 100 to find voice patch;
+#X obj 379 81 declare -path .. -path .;
+#X text 411 14 grrrr.org \, 2012-15;
+#X obj 36 79 kbd;
+#X obj 36 545 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
 #X obj 31 338 cnv 15 230 200 empty empty eight_voices 20 12 0 14 -233017
 -66577 0;
-#X obj 313 520 out-mono;
-#X obj 313 490 catch~ \$0-bus;
-#X text 414 14 grrrr.org \, 2012;
-#X floatatom 36 150 5 0 0 1 MIDI_note - -;
+#X obj 358 510 out-mono;
+#X obj 358 480 catch~ \$0-bus;
+#X floatatom 36 150 5 0 0 1 MIDI_note - -, f 5;
 #X obj 36 125 unpack;
 #X obj 36 203 upp.dilemma;
 #X obj 75 181 == 0;
 #X obj 290 365 t a;
 #X obj 36 261 list append 1 20 100 0.5 500;
-#X text 228 262 add ADSR params (gain ms ms gain ms);
+#X text 228 263 add ADSR params (gain ms ms gain ms);
 #X text 20 221 noteon;
 #X text 70 221 noteoff;
-#X obj 412 82 declare -path .;
-#X text 410 98 to find voice patch;
 #X obj 36 363 upp.flow spat-mono \$0-bus note_off;
 #X obj 36 385 upp.flow spat-mono \$0-bus note_off;
 #X obj 36 407 upp.flow spat-mono \$0-bus note_off;
@@ -31,23 +31,23 @@
 #X obj 36 473 upp.flow spat-mono \$0-bus note_off;
 #X obj 36 495 upp.flow spat-mono \$0-bus note_off;
 #X obj 36 517 upp.flow spat-mono \$0-bus note_off;
-#X connect 0 0 9 0;
-#X connect 6 0 5 0;
-#X connect 8 0 10 0;
+#X connect 5 0 11 0;
 #X connect 9 0 8 0;
-#X connect 9 1 11 0;
-#X connect 10 0 13 0;
-#X connect 10 1 12 0;
-#X connect 11 0 10 1;
-#X connect 12 0 19 1;
-#X connect 12 0 20 1;
-#X connect 12 0 21 1;
-#X connect 12 0 22 1;
-#X connect 12 0 23 1;
-#X connect 12 0 24 1;
-#X connect 12 0 25 1;
-#X connect 12 0 26 1;
-#X connect 13 0 19 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 11 1 13 0;
+#X connect 12 0 15 0;
+#X connect 12 1 14 0;
+#X connect 13 0 12 1;
+#X connect 14 0 19 1;
+#X connect 14 0 20 1;
+#X connect 14 0 21 1;
+#X connect 14 0 22 1;
+#X connect 14 0 23 1;
+#X connect 14 0 24 1;
+#X connect 14 0 25 1;
+#X connect 14 0 26 1;
+#X connect 15 0 19 0;
 #X connect 19 0 20 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
@@ -55,4 +55,4 @@
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 0;
-#X connect 26 0 1 0;
+#X connect 26 0 6 0;

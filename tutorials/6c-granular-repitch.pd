@@ -1,17 +1,17 @@
-#N canvas 109 94 622 527 10;
-#X declare -path .;
-#X text 399 268 half window for one grain;
-#X obj 96 347 moses;
-#X obj 144 347 spigot;
+#N canvas 13 32 621 497 10;
+#X declare -path .. -path .;
+#X text 424 269 half window for one grain;
+#X obj 96 323 moses;
+#X obj 144 323 spigot;
 #X obj 340 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
 1;
-#X obj 445 448 out-mono;
+#X obj 440 427 out-mono;
 #X obj 327 180 sample \$0-sample;
-#X obj 35 484 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+#X obj 35 451 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X floatatom 325 480 5 0 0 0 voices_active - -;
-#X obj 35 417 list prepend \$0-sample;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+#X floatatom 325 456 5 0 0 0 voices_active - -, f 5;
+#X obj 35 393 list prepend \$0-sample;
+#X obj 27 11 cnv 15 550 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
@@ -20,16 +20,15 @@
 #X text 34 34 synchronous granular playing through audio buffer;
 #X obj 182 107 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
 -204786 -1 -1 8468 1;
-#X obj 445 426 catch~ \$0-bus;
-#X text 414 14 grrrr.org \, 2012;
-#X obj 214 418 list prepend \$0-sample;
+#X obj 440 403 catch~ \$0-bus;
+#X obj 214 394 list prepend \$0-sample;
 #X obj 100 109 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
 10 -204786 -1 -1 100 256;
 #X obj 100 129 / 2;
 #X msg 58 180 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
 -8 0 10 -262144 -1 -1 0 256;
-#X text 182 418 tag;
+#X text 182 394 tag;
 #N canvas 146 114 603 538 play 0;
 #X obj 63 448 outlet;
 #X text 257 150 attack+sustain;
@@ -88,34 +87,35 @@
 #X obj 35 230 t a a;
 #X obj 180 166 nbx 5 14 -1e+37 1e+37 0 0 empty empty pitch-shift_(halftones)
 0 -8 0 10 -204786 -1 -1 0 256;
-#X obj 234 386 expr pow(2 \, $f1/12);
-#X obj 35 388 list append 1;
-#X obj 399 287 wnd-lin \$0-wnd 1024;
-#X obj 460 104 declare -path .;
+#X obj 234 362 expr pow(2 \, $f1/12);
+#X obj 35 364 list append 1;
+#X obj 424 288 wnd-lin \$0-wnd 1024;
 #X text 458 120 to find voice patch;
-#X obj 35 451 upp.xc 10 spat-mono \$0-bus syn-sample-var \$0-wnd 1024
+#X obj 35 427 upp.xc 10 spat-mono \$0-bus syn-sample-var \$0-wnd 1024
 ;
+#X obj 428 100 declare -path .. -path .;
+#X text 456 14 grrrr.org \, 2012-15;
 #X connect 1 1 2 0;
-#X connect 2 0 19 0;
+#X connect 2 0 18 0;
 #X connect 3 0 2 1;
 #X connect 5 0 1 1;
-#X connect 8 0 30 0;
-#X connect 10 0 22 0;
-#X connect 11 0 22 5;
+#X connect 8 0 28 0;
+#X connect 10 0 21 0;
+#X connect 11 0 21 5;
 #X connect 13 0 11 0;
 #X connect 14 0 4 0;
-#X connect 16 0 30 1;
-#X connect 17 0 18 0;
-#X connect 18 0 22 2;
-#X connect 18 0 22 4;
-#X connect 19 0 22 1;
-#X connect 20 0 1 0;
-#X connect 22 0 23 0;
-#X connect 22 1 16 0;
-#X connect 23 0 20 0;
-#X connect 23 1 26 0;
-#X connect 24 0 25 0;
-#X connect 25 0 26 1;
-#X connect 26 0 8 0;
-#X connect 30 0 6 0;
-#X connect 30 2 7 0;
+#X connect 15 0 28 1;
+#X connect 16 0 17 0;
+#X connect 17 0 21 2;
+#X connect 17 0 21 4;
+#X connect 18 0 21 1;
+#X connect 19 0 1 0;
+#X connect 21 0 22 0;
+#X connect 21 1 15 0;
+#X connect 22 0 19 0;
+#X connect 22 1 25 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 1;
+#X connect 25 0 8 0;
+#X connect 28 0 6 0;
+#X connect 28 2 7 0;

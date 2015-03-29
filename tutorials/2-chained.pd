@@ -1,0 +1,45 @@
+#N canvas 1 22 559 391 10;
+#X declare -path ..;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 32 can play as many simultaneous events as there are voices
+;
+#X obj 428 65 declare -path ..;
+#X text 412 14 grrrr.org \, 2012-15;
+#X floatatom 45 176 5 0 0 1 MIDI_note - -, f 5;
+#X obj 45 87 kbd;
+#X obj 45 238 upp.flowctrl;
+#X obj 45 352 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+-1 -1;
+#X obj 45 265 upp.flowctrl;
+#X obj 45 292 upp.flowctrl;
+#X obj 45 319 upp.flowctrl;
+#X obj 45 126 unpack;
+#X obj 45 145 spigot;
+#X obj 132 238 note_alt;
+#X obj 132 265 note_alt;
+#X obj 132 292 note_alt;
+#X obj 132 319 note_alt;
+#X obj 251 322 out-mono;
+#X text 51 217 daisy-chained voices;
+#X connect 4 0 6 0;
+#X connect 5 0 11 0;
+#X connect 6 0 8 0;
+#X connect 6 1 13 0;
+#X connect 8 0 9 0;
+#X connect 8 1 14 0;
+#X connect 9 0 10 0;
+#X connect 9 1 15 0;
+#X connect 10 0 7 0;
+#X connect 10 1 16 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 12 0 4 0;
+#X connect 13 0 6 1;
+#X connect 13 1 17 0;
+#X connect 14 0 8 1;
+#X connect 14 1 17 0;
+#X connect 15 0 9 1;
+#X connect 15 1 17 0;
+#X connect 16 0 10 1;
+#X connect 16 1 17 0;
