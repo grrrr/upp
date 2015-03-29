@@ -1,14 +1,14 @@
-#N canvas 108 69 670 498 10;
-#X declare -path .;
-#X obj 39 461 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
+#N canvas 9 22 677 513 10;
+#X declare -path .. -path .;
+#X obj 39 458 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
 -1 -1 0 1;
 #X obj 39 167 *;
 #X text 137 187 position in buffer(ms);
 #X text 161 264 attack sustain decay;
-#X text 472 244 half window for one grain;
-#X floatatom 117 235 5 0 0 0 - - -;
+#X text 474 244 half window for one grain;
+#X floatatom 117 235 5 0 0 0 - - -, f 5;
 #X text 299 102 0...1;
 #X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
@@ -19,10 +19,10 @@
 #X obj 27 11 cnv 15 600 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 granular scrubbing through audio buffer;
-#X floatatom 324 460 5 0 0 0 voices_active - -;
-#X obj 475 262 wnd-sin \$0-wnd 1024;
-#X obj 388 369 catch~ \$0-bus-1;
-#X obj 521 369 catch~ \$0-bus-2;
+#X floatatom 324 460 5 0 0 0 voices_active - -, f 5;
+#X obj 511 262 wnd-sin \$0-wnd 1024;
+#X obj 401 370 catch~ \$0-bus-1;
+#X obj 534 370 catch~ \$0-bus-2;
 #X obj 39 345 list prepend 0 0;
 #X obj 39 316 t a b;
 #X text 145 344 x y;
@@ -68,23 +68,23 @@
 #X restore 148 317 pd polarpanning;
 #X obj 260 319 hsl 128 15 0.05 1 1 0 empty empty deviation -2 -8 0
 10 -262130 -1 -1 0 1;
-#X floatatom 258 338 5 0 0 0 - - -;
-#X obj 407 390 catch~ \$0-bus-3;
-#X obj 540 390 catch~ \$0-bus-4;
-#X obj 388 417 out-quad;
-#X text 526 15 grrrr.org \, 2012;
-#X text 387 459 quadrophonic output;
+#X floatatom 257 338 5 0 0 0 - - -, f 5;
+#X obj 412 391 catch~ \$0-bus-3;
+#X obj 535 391 catch~ \$0-bus-4;
+#X obj 423 419 out-quad;
+#X text 430 461 quadrophonic output;
 #X text 181 399 this is the tag;
-#X obj 513 85 declare -path .;
-#X text 511 101 to find voice patch;
+#X text 510 103 to find voice patch;
 #X obj 39 434 upp.xc 20 spat-quad \$0-bus syn-grain \$0-wnd 1024;
+#X text 509 15 grrrr.org \, 2012-15;
+#X obj 480 83 declare -path .. -path .;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 6 0 11 1;
 #X connect 6 0 11 3;
 #X connect 8 0 11 0;
 #X connect 9 0 2 1;
-#X connect 10 0 33 0;
+#X connect 10 0 31 0;
 #X connect 11 0 20 0;
 #X connect 17 0 27 0;
 #X connect 18 0 27 1;
@@ -96,5 +96,5 @@
 #X connect 23 0 24 0;
 #X connect 25 0 27 2;
 #X connect 26 0 27 3;
-#X connect 33 0 0 0;
-#X connect 33 2 15 0;
+#X connect 31 0 0 0;
+#X connect 31 2 15 0;

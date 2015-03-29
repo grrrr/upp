@@ -1,4 +1,4 @@
-#N canvas 550 279 535 417 10;
+#N canvas 21 28 535 417 10;
 #X obj 217 255 int;
 #X obj 249 255 + 1;
 #X obj 183 254 -;
@@ -16,7 +16,7 @@
 #X obj 379 62 loadbang;
 #X obj 379 85 f \$2;
 #X obj 379 107 - 0.001;
-#X text 51 18 multi-pan \$1... bus-basename \, \$2...number of speakers
+#X text 46 18 multi-pan \$1... bus-basename \, \$2...number of speakers
 ;
 #X obj 198 165 max 1;
 #X obj 45 67 inlet;
@@ -50,8 +50,6 @@
 #X connect 20 0 21 0;
 #X connect 20 1 23 0;
 #X connect 21 0 22 0;
-#X connect 21 1 9 0;
-#X connect 21 1 10 0;
 #X connect 23 0 18 0;
 #X connect 24 0 21 1;
 #X connect 24 1 23 0;

@@ -1,22 +1,22 @@
-#N canvas 95 306 557 463 10;
-#X declare -path .;
-#X floatatom 53 161 5 0 0 1 MIDI_note - -;
+#N canvas 2 30 577 451 10;
+#X declare -path .. -path .;
+#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
+10 10 0 14 -233017 -66577 0;
+#X text 34 34 encapsulating abstractions into daisy-chained voices
+;
+#X text 404 99 to find voice patch;
+#X obj 380 78 declare -path .. -path .;
+#X text 414 14 grrrr.org \, 2012-15;
+#X floatatom 53 161 5 0 0 1 MIDI_note - -, f 5;
 #X obj 53 80 kbd;
 #X obj 53 404 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X obj 27 11 cnv 15 500 40 empty empty Universal_Polyphonic_Player
-10 10 0 14 -233017 -66577 0;
 #X obj 53 118 unpack;
 #X obj 53 137 spigot;
-#X text 34 34 encapsulating abstractions into daisy-chained voices
-;
 #X obj 48 197 cnv 15 230 200 empty empty eight_voices 20 12 0 14 -233017
 -66577 0;
-#X obj 308 357 out-mono;
-#X obj 308 327 catch~ \$0-bus;
-#X text 414 14 grrrr.org \, 2012;
-#X obj 405 83 declare -path .;
-#X text 403 99 to find voice patch;
+#X obj 368 358 out-mono;
+#X obj 368 328 catch~ \$0-bus;
 #X obj 53 222 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 244 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 266 upp.flow spat-mono \$0-bus note_alt;
@@ -25,12 +25,12 @@
 #X obj 53 332 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 354 upp.flow spat-mono \$0-bus note_alt;
 #X obj 53 376 upp.flow spat-mono \$0-bus note_alt;
-#X connect 0 0 13 0;
-#X connect 1 0 4 0;
-#X connect 4 0 5 0;
-#X connect 4 1 5 1;
-#X connect 5 0 0 0;
-#X connect 9 0 8 0;
+#X connect 5 0 13 0;
+#X connect 6 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 5 0;
+#X connect 12 0 11 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
@@ -38,4 +38,4 @@
 #X connect 17 0 18 0;
 #X connect 18 0 19 0;
 #X connect 19 0 20 0;
-#X connect 20 0 2 0;
+#X connect 20 0 7 0;
