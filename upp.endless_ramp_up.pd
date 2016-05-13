@@ -1,0 +1,10 @@
+#N canvas 173 94 232 261 10;
+#X obj 38 83 inlet;
+#X obj 38 196 outlet~;
+#X obj 38 160 biquad~ 1 0 1 0 0;
+#X msg 38 128 set -1 \, 1;
+#X text 34 16 endless ramp up;
+#X text 37 62 reset;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
