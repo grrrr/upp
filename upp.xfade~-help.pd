@@ -1,0 +1,32 @@
+#N canvas 584 364 343 297 10;
+#X obj 41 235 snapshot~;
+#X obj 66 206 metro 10;
+#X msg 66 184 1;
+#X obj 66 162 loadbang;
+#X obj 41 81 sig~ 2;
+#X obj 92 82 sig~ 3;
+#X obj 41 134 upp.xfade~;
+#X text 36 19 Fade linearly between two signals;
+#X obj 165 133 sig~;
+#X obj 168 81 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -257985
+-1 -1 0 1;
+#X obj 41 258 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-257985 -1 -1 2 256;
+#X text 55 61 A;
+#X text 103 62 B;
+#X text 161 62 A;
+#X text 209 60 <----->;
+#X text 290 60 B;
+#X text 210 48 0.....1;
+#X obj 165 99 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-257985 -1 -1 0 256;
+#X connect 0 0 10 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 0 0;
+#X connect 8 0 6 2;
+#X connect 9 0 17 0;
+#X connect 17 0 8 0;
