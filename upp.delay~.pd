@@ -1,4 +1,4 @@
-#N canvas 0 22 284 213 10;
+#N canvas 0 22 356 217 10;
 #N canvas 484 237 243 216 delwrite 0;
 #X obj 47 32 inlet~;
 #X obj 46 132 outlet~;
@@ -16,13 +16,14 @@
 #X obj 34 46 inlet~;
 #X obj 34 171 outlet~;
 #X obj 162 45 inlet;
-#X obj 162 109 upp.s2ms;
+#X obj 162 88 upp.s2ms;
 #X text 155 66 delay(samples);
 #X text 33 18 grrrr.org \, 2012-2016;
-#X obj 162 87 + 0.01;
+#X text 108 143 delread is rounding (not truncating);
+#X text 108 156 to sample times;
+#X text 106 170 (no need to correct incoming values);
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
-#X connect 4 0 8 0;
+#X connect 4 0 5 0;
 #X connect 5 0 1 1;
-#X connect 8 0 5 0;
