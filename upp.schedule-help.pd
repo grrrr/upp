@@ -1,0 +1,34 @@
+#N canvas 42 460 746 299 10;
+#X obj 47 114 t a b;
+#X obj 47 191 t a b;
+#X obj 47 249 print;
+#X obj 195 225 timer;
+#X msg 47 62 0;
+#X floatatom 196 250 8 0 0 0 - - -, f 8;
+#X msg 82 62 1000;
+#X msg 126 61 44100;
+#X text 175 62 time is in samples;
+#X text 50 232 remaining samples;
+#X text 167 138 2nd arg/inlet... position of time in list (default
+0);
+#X text 167 155 3rd arg/inlet... block size (default 64);
+#X text 167 122 1st inlet: list/float;
+#X obj 541 191 print;
+#X msg 541 95 list a b 1000;
+#X msg 551 117 list a b 64;
+#X obj 541 152 upp.schedule 2;
+#X obj 47 150 upp.schedule;
+#X text 46 26 Schedule event to the latest inter-DSP-block gap before
+the given time;
+#X connect 0 0 17 0;
+#X connect 0 1 3 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 13 0;
+#X connect 17 0 1 0;
