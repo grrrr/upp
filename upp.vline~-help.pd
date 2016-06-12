@@ -1,6 +1,4 @@
-#N canvas 79 58 455 394 10;
-#X obj 28 93 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0 1
-;
+#N canvas 65 48 476 463 10;
 #N canvas 0 22 450 300 snap 0;
 #X obj 20 14 inlet~;
 #X obj 20 165 outlet;
@@ -19,11 +17,8 @@
 #X coords 0 -1 1 1 100 20 1 100 100;
 #X restore 28 171 pd snap;
 #X msg 28 120 \$1 44100 0;
-#X msg 52 93 0.5;
-#X obj 31 199 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 31 199 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -261682
 -1 -1 0 1;
-#X obj 221 96 bng 15 250 50 0 empty empty empty 17 7 0 10 -260097 -1
--1;
 #N canvas 0 22 239 213 print_dsp_blocks 0;
 #X obj 143 168 print~;
 #X obj 36 105 spigot;
@@ -46,35 +41,46 @@
 #X connect 7 0 9 0;
 #X connect 8 0 0 0;
 #X connect 9 0 6 1;
-#X restore 221 250 pd print_dsp_blocks;
-#X obj 221 136 t b b b;
-#X obj 278 136 print ============;
-#X msg 221 224 3;
+#X restore 221 284 pd print_dsp_blocks;
+#X obj 278 122 print ============;
+#X msg 221 258 3;
 #X obj 98 147 print OVF;
-#X obj 312 192 print OVF;
-#X obj 28 146 upp.vline~;
-#X text 26 17 Replacement for vline~ with expected behavior;
+#X obj 347 258 print OVF;
 #X text 26 56 grrrr.org 2016;
-#X text 26 38 Time units are samples;
-#X text 35 334 - block size (default=64);
-#X text 34 288 upp.vline~ can be given two arguments:;
-#X text 35 304 - voices (default=2): number of ramp parts within one
+#X text 26 36 Time units are samples;
+#X text 35 376 - block size (default=64);
+#X text 34 330 upp.vline~ can be given two arguments:;
+#X text 35 346 - voices (default=2): number of ramp parts within one
 DSP block. Overflow will be signaled at right outlet if exceeded;
-#X text 36 358 The block size can also be set through the right iinlet
+#X text 36 400 The block size can also be set through the right iinlet
 ;
-#X obj 241 192 upp.vline~;
-#X msg 240 168 1 10 5 \, 0.5 40 50 \, 0 20 120;
+#X obj 221 99 hradio 15 1 0 3 empty empty examples 0 -8 0 10 -260097
+-1 -1 0;
+#X obj 221 122 t b a b;
+#X obj 240 147 sel 0 1 2;
+#X obj 28 99 hradio 15 1 0 3 empty empty target_value 0 -8 0 10 -260097
+-1 -1 0;
+#X obj 28 146 upp.vline~;
+#X obj 254 258 upp.vline~ 8;
+#X msg 257 199 1 10 10 \, 0.5 40 50 \, 0 20 120;
+#X msg 274 221 0 \, 1 0 1 \, 0 0 2 \, 1 0 3 \, 0 0 4;
+#X msg 240 177 1 0 20 \, 0 0 40 \, 1 2 60 \, 0 2 80;
+#X text 26 17 Replacement for vline~ with line~-like slopes;
 #X connect 0 0 2 0;
-#X connect 1 0 4 0;
-#X connect 2 0 12 0;
-#X connect 3 0 2 0;
-#X connect 5 0 7 0;
-#X connect 7 0 9 0;
-#X connect 7 1 21 0;
-#X connect 7 2 8 0;
-#X connect 9 0 6 0;
-#X connect 12 0 1 0;
-#X connect 12 1 10 0;
-#X connect 20 0 6 1;
-#X connect 20 1 11 0;
-#X connect 21 0 20 0;
+#X connect 1 0 18 0;
+#X connect 5 0 3 0;
+#X connect 14 0 15 0;
+#X connect 15 0 5 0;
+#X connect 15 1 16 0;
+#X connect 15 2 4 0;
+#X connect 16 0 22 0;
+#X connect 16 1 20 0;
+#X connect 16 2 21 0;
+#X connect 17 0 1 0;
+#X connect 18 0 0 0;
+#X connect 18 1 6 0;
+#X connect 19 0 3 1;
+#X connect 19 1 7 0;
+#X connect 20 0 19 0;
+#X connect 21 0 19 0;
+#X connect 22 0 19 0;
