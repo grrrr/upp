@@ -13,17 +13,13 @@
 #X text 103 63 start;
 #X text 146 63 inc;
 #X obj 38 155 f -1;
-#X floatatom 103 115 5 0 0 0 - - -, f 5;
-#X floatatom 152 116 5 0 0 0 - - -, f 5;
 #X connect 0 0 7 0;
 #X connect 4 0 1 0;
 #X connect 5 0 13 1;
-#X connect 5 0 14 0;
 #X connect 6 0 4 0;
 #X connect 7 0 13 0;
 #X connect 7 1 9 0;
 #X connect 8 0 6 0;
 #X connect 9 0 8 1;
 #X connect 10 0 9 1;
-#X connect 10 0 15 0;
 #X connect 13 0 8 0;
