@@ -1,4 +1,4 @@
-#N canvas 137 374 476 376 10;
+#N canvas 137 374 492 378 10;
 #X obj 39 80 inlet;
 #X obj 39 316 outlet;
 #X obj 218 316 outlet;
@@ -7,7 +7,7 @@
 #X obj 108 317 switch~;
 #X obj 371 80 inlet;
 #X obj 39 119 upp.flowctrl;
-#X obj 371 105 spigot;
+#X obj 371 159 spigot;
 #X text 38 60 event message;
 #X text 370 60 mod message;
 #X obj 218 293 t b b;
