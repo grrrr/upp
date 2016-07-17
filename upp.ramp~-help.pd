@@ -1,0 +1,23 @@
+#N canvas 109 64 450 300 10;
+#X obj 53 157 t b b;
+#X obj 52 239 print~;
+#X obj 53 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 48 31 Provides a ramp starting with the bang at block start.
+;
+#X text 51 82 As of Pd 0.46 \, both line~ and vline~ provide buggy
+ramps.;
+#X text 102 241 see Pd console;
+#X obj 79 186 upp.ramp~;
+#X obj 104 140 nbx 5 14 -1e+37 1e+37 0 1 empty empty start 0 -8 0 10
+-257985 -1 -1 0 256;
+#X obj 162 140 nbx 5 14 -1e+37 1e+37 0 1 empty empty inc 0 -8 0 10
+-257985 -1 -1 1 256;
+#X text 49 46 By default \, values are increasing by 1 with each sample.
+;
+#X connect 0 0 1 0;
+#X connect 0 1 6 0;
+#X connect 2 0 0 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 2;

@@ -27,6 +27,7 @@
 #X text 61 20 tag=midinote volume A(ms) D(ms) S(gain) R(ms);
 #X text 49 424 output delay time;
 #X obj 67 260 upp.once;
+#X obj 67 378 upp.ms2s;
 #X connect 0 0 10 0;
 #X connect 3 0 4 0;
 #X connect 4 0 23 0;
@@ -50,4 +51,5 @@
 #X connect 19 4 17 1;
 #X connect 19 5 12 1;
 #X connect 21 0 13 0;
-#X connect 26 0 1 0;
+#X connect 26 0 27 0;
+#X connect 27 0 1 0;

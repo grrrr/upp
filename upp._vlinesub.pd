@@ -64,7 +64,7 @@
 #X connect 27 0 22 1;
 #X restore 103 231 pd init;
 #N canvas 366 195 777 579 DSP 0;
-#X obj 359 136 upp.endless_ramp_up~;
+#X obj 359 136 upp.ramp~;
 #X obj 137 49 r \$0-busy;
 #X obj 644 32 r \$0-dur;
 #X obj 359 330 clip~ 0 1;
