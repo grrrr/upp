@@ -3,20 +3,20 @@
 #X obj 39 434 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 0 1;
+-1 -1 8900 1;
 #X obj 39 167 *;
 #X text 161 264 attack sustain decay;
 #X text 470 256 half window for one grain;
 #X floatatom 112 224 5 0 0 0 - - -, f 5;
 #X text 299 102 0...1;
 #X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 828275 256;
 #X obj 371 150 sample \$0-sample;
 #X obj 39 379 list prepend \$0-sample;
 #X obj 27 11 cnv 15 600 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X text 34 34 granular scrubbing through audio buffer;
-#X floatatom 336 433 5 0 0 0 voices_active - -, f 5;
+#X floatatom 318 433 5 0 0 0 voices_active - -, f 5;
 #X obj 504 273 wnd-sin \$0-wnd 1024;
 #X obj 433 405 out-stereo;
 #X obj 39 311 t a b;
@@ -37,8 +37,6 @@
 #X text 182 379 this is the tag;
 #X text 182 311 random panning -1...+1;
 #X text 508 105 to find voice patch;
-#X obj 39 408 upp.xc 20 spat-stereo \$0-bus syn-grain \$0-wnd 1024
-;
 #X obj 479 86 declare -path .. -path .;
 #X text 508 16 grrrr.org \, 2012-15;
 #X obj 372 214 upp.ms2s;
@@ -46,21 +44,22 @@
 #X obj 39 265 pack 0 5000 0 5000;
 #X obj 112 242 upp.ms2s;
 #X text 147 223 change attack+decay (ms);
+#X obj 39 408 upp 20 spat-stereo \$0-bus syn-grain \$0-wnd 1024;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
-#X connect 5 0 29 0;
-#X connect 7 0 28 0;
-#X connect 8 0 26 0;
-#X connect 9 0 23 0;
+#X connect 5 0 28 0;
+#X connect 7 0 27 0;
+#X connect 8 0 25 0;
+#X connect 9 0 30 0;
 #X connect 15 0 16 0;
 #X connect 15 1 19 0;
 #X connect 16 0 9 0;
 #X connect 17 0 14 0;
 #X connect 18 0 14 1;
 #X connect 19 0 16 1;
-#X connect 23 0 0 0;
-#X connect 23 2 12 0;
-#X connect 26 0 2 1;
-#X connect 28 0 15 0;
-#X connect 29 0 28 1;
-#X connect 29 0 28 3;
+#X connect 25 0 2 1;
+#X connect 27 0 15 0;
+#X connect 28 0 27 1;
+#X connect 28 0 27 3;
+#X connect 30 0 0 0;
+#X connect 30 2 12 0;
