@@ -1,21 +1,21 @@
-#N canvas 42 64 677 513 10;
+#N canvas 99 83 677 513 10;
 #X declare -path .. -path .;
 #X obj 39 480 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 10600 1;
+-1 -1 21200 1;
 #X obj 39 167 *;
 #X text 161 264 attack sustain decay;
 #X text 474 244 half window for one grain;
 #X floatatom 112 223 5 0 0 0 - - -, f 5;
 #X text 299 102 0...1;
 #X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 986484 256;
+-262144 -1 -1 1.97297e+06 256;
 #X obj 381 154 sample \$0-sample;
 #X obj 39 415 list prepend \$0-sample;
 #X obj 27 11 cnv 15 600 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X floatatom 351 481 5 0 0 0 voices_active - -, f 5;
+#X floatatom 360 481 5 0 0 0 voices_active - -, f 5;
 #X obj 511 262 wnd-sin \$0-wnd 1024;
 #X obj 39 312 t a b;
 #X text 510 103 to find voice patch;
@@ -44,7 +44,6 @@
 #X floatatom 108 334 5 0 0 0 - - -, f 5;
 #X obj 108 353 pack 0 0 0.5;
 #X obj 39 375 list prepend;
-#X msg 64 334 5;
 #X text 377 310 Dolby-5.1 loudspeaker arrangement;
 #X text 377 327 The order of speakers is defined in;
 #X text 376 345 [vbap-5.1] as follows:;
@@ -56,14 +55,16 @@
 #X obj 490 432 out-multi \$0-bus 5;
 #X obj 39 456 upp 20 spat-vbap vbap-5.1 \$0-bus syn-grain \$0-wnd 1024
 ;
+#X msg 64 334 1;
+#X text 144 333 azimuth in degrees;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 5 0 20 0;
 #X connect 7 0 19 0;
 #X connect 8 0 16 0;
-#X connect 9 0 36 0;
+#X connect 9 0 35 0;
 #X connect 13 0 25 0;
-#X connect 13 1 26 0;
+#X connect 13 1 36 0;
 #X connect 16 0 2 1;
 #X connect 19 0 13 0;
 #X connect 20 0 19 3;
@@ -72,6 +73,6 @@
 #X connect 23 0 24 0;
 #X connect 24 0 25 1;
 #X connect 25 0 9 0;
-#X connect 26 0 22 0;
-#X connect 36 0 0 0;
-#X connect 36 2 11 0;
+#X connect 35 0 0 0;
+#X connect 35 2 11 0;
+#X connect 36 0 22 0;
