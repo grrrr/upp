@@ -1,4 +1,4 @@
-#N canvas 0 22 370 323 10;
+#N canvas 534 270 370 323 10;
 #X obj 45 53 inlet;
 #X obj 45 253 outlet;
 #X obj 216 48 inlet;
@@ -171,7 +171,6 @@
 #X obj 121 385 list append;
 #X obj 88 260 t a b;
 #X text 164 295 delete first queue entry;
-#X floatatom 212 111 10 0 0 0 - - -, f 10;
 #X connect 0 0 12 0;
 #X connect 2 0 6 1;
 #X connect 2 0 7 2;
@@ -180,7 +179,6 @@
 #X connect 5 0 4 0;
 #X connect 6 0 9 1;
 #X connect 7 0 13 0;
-#X connect 7 0 21 0;
 #X connect 8 0 6 0;
 #X connect 8 0 14 1;
 #X connect 9 0 19 0;
