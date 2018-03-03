@@ -1,24 +1,24 @@
-#N canvas 55 58 562 269 10;
-#X obj 30 108 inlet;
-#X obj 129 107 inlet;
-#X text 131 89 modulation message;
-#X text 28 90 event message;
-#X obj 30 218 outlet;
-#X obj 103 218 outlet;
-#X text 31 235 pass on;
-#X text 99 235 release;
-#X obj 168 218 outlet;
-#X text 165 236 voices active;
-#N canvas 0 22 450 300 \$0-UPP 0;
+#N canvas 55 58 562 324 10;
+#X obj 30 165 inlet;
+#X obj 129 164 inlet;
+#X text 131 146 modulation message;
+#X text 28 147 event message;
+#X obj 30 275 outlet;
+#X obj 103 275 outlet;
+#X text 31 292 pass on;
+#X text 99 292 release;
+#X obj 168 275 outlet;
+#X text 165 293 voices active;
+#N canvas 84 388 450 300 \$0-UPP 0;
 #X obj 51 40 inlet;
 #X obj 182 39 inlet;
 #X obj 51 217 outlet;
 #X obj 117 217 outlet;
 #X obj 182 217 outlet;
-#X restore 30 162 pd \$0-UPP;
-#X obj 301 106 loadbang;
-#X obj 301 130 f \$1;
-#X text 334 130 number of voices;
+#X restore 30 219 pd \$0-UPP;
+#X obj 301 163 loadbang;
+#X obj 301 187 f \$1;
+#X text 334 187 number of voices;
 #N canvas 78 120 446 229 gen 0;
 #X obj 31 27 inlet;
 #X msg 31 118 connect 0 0 5 0 \, connect 1 0 5 1 \, connect 5 0 2 0
@@ -33,19 +33,20 @@
 #X connect 2 1 5 0;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
-#X restore 301 226 pd gen;
-#X obj 301 153 moses 50;
-#X msg 301 177 symbol upp.xc;
-#X msg 390 177 symbol upp.xf;
-#X obj 301 203 list append \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
-#X text 359 153 <50: upp.xc \, >=50: upp.xf;
-#X text 93 163 upp.xc / upp.xf;
-#X obj 15 11 cnv 15 530 60 empty empty empty 20 12 0 14 -233017 -66577
+#X restore 301 283 pd gen;
+#X obj 301 210 moses 50;
+#X msg 301 234 symbol upp.xc;
+#X msg 390 234 symbol upp.xf;
+#X obj 301 260 list append \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
+#X text 359 210 <50: upp.xc \, >=50: upp.xf;
+#X text 93 220 upp.xc / upp.xf;
+#X obj 15 11 cnv 15 530 100 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 36 23 Main UPP abstraction;
 #X text 436 22 grrrr.org 2016;
-#X text 36 41 Given voice count \$1 is used to select between upp.xc
-or upp.xf;
+#X text 36 41 \$1: max voices - used to select between upp.xc or upp.xf
+;
+#X text 36 56 \$2: player abstraction;
 #X connect 0 0 10 0;
 #X connect 1 0 10 1;
 #X connect 10 0 4 0;

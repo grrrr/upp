@@ -3,7 +3,7 @@
 #X obj 39 458 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
 #X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 6100 1;
+-1 -1 0 1;
 #X obj 39 167 *;
 #X text 161 264 attack sustain decay;
 #X text 474 244 half window for one grain;
@@ -15,7 +15,7 @@
 #X obj 39 398 list prepend \$0-sample;
 #X obj 27 11 cnv 15 600 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X floatatom 306 460 5 0 0 0 voices_active - -, f 5;
+#X floatatom 276 457 5 0 0 0 voices_active - -, f 5;
 #X obj 511 262 wnd-sin \$0-wnd 1024;
 #X obj 39 345 list prepend 0 0;
 #X obj 39 316 t a b;
@@ -61,7 +61,7 @@
 #X connect 17 1 6 0;
 #X restore 132 317 pd polarpanning;
 #X obj 260 319 hsl 128 15 0.05 1 1 0 empty empty deviation -2 -8 0
-10 -262130 -1 -1 7500 1;
+10 -262130 -1 -1 0 1;
 #X floatatom 257 338 5 0 0 0 - - -, f 5;
 #X text 472 395 quadrophonic output;
 #X text 510 103 to find voice patch;
@@ -75,7 +75,7 @@
 #X obj 473 413 out-multi \$0-bus 4;
 #X text 34 34 granular scrubbing with quadrophony;
 #X text 181 399 the sample name is also the tag;
-#X obj 39 434 upp 20 spat-quad \$0-bus syn-grain \$0-wnd 1024;
+#X obj 39 434 upp 20 spat-quad \$0-bus syn-grain \$0-wnd;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 5 0 27 0;

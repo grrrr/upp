@@ -7,7 +7,7 @@
 #X text 465 24 grrrr.org \, 2012-15;
 #X obj 440 85 declare -path .. -path .;
 #X obj 189 134 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 1.11573 256;
+-1 -1 1.07522 256;
 #X obj 192 116 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
 -204786 -1 -1 8668 1;
 #X obj 110 118 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
@@ -71,19 +71,19 @@
 #X obj 341 187 sample \$0-sample;
 #X obj 45 449 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X floatatom 330 452 5 0 0 0 voices_active - -, f 5;
+#X floatatom 299 449 5 0 0 0 voices_active - -, f 5;
 #X obj 45 398 list prepend \$0-sample;
 #X obj 46 118 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
 #X obj 446 413 catch~ \$0-bus;
 #X obj 45 299 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(samps)
-0 -8 0 10 -262144 -1 -1 179594 256;
+0 -8 0 10 -262144 -1 -1 0 256;
 #X text 192 399 tag;
 #X obj 45 240 t a a;
 #X obj 454 299 wnd-lin \$0-wnd 1024;
 #X obj 103 187 upp.ms2s;
-#X obj 45 423 upp.xc 10 spat-mono \$0-bus syn-grain \$0-wnd 1024;
 #X obj 341 250 upp.ms2s;
+#X obj 45 423 upp.xc 10 spat-mono \$0-bus syn-grain \$0-wnd;
 #X connect 5 0 10 5;
 #X connect 6 0 5 0;
 #X connect 7 0 8 0;
@@ -93,8 +93,8 @@
 #X connect 12 1 13 0;
 #X connect 13 0 9 0;
 #X connect 14 0 13 1;
-#X connect 16 0 28 0;
-#X connect 19 0 27 0;
+#X connect 16 0 27 0;
+#X connect 19 0 28 0;
 #X connect 20 0 10 0;
 #X connect 21 0 15 0;
 #X connect 22 0 12 0;
@@ -102,6 +102,6 @@
 #X connect 24 1 19 0;
 #X connect 26 0 10 4;
 #X connect 26 0 10 2;
-#X connect 27 0 17 0;
-#X connect 27 2 18 0;
-#X connect 28 0 12 1;
+#X connect 27 0 12 1;
+#X connect 28 0 17 0;
+#X connect 28 2 18 0;

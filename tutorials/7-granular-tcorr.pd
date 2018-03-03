@@ -14,11 +14,11 @@
 #X obj 308 185 sample \$0-sample;
 #X obj 35 478 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X floatatom 356 480 5 0 0 0 voices_active - -, f 5;
-#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
+#X floatatom 326 480 5 0 0 0 voices_active - -, f 5;
+#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
 #X obj 179 125 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 1.00018 256;
+-1 -1 0.964388 256;
 #X obj 182 107 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
 -204786 -1 -1 8467 1;
 #X obj 100 109 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
@@ -26,7 +26,7 @@
 #X obj 100 129 / 2;
 #X msg 58 180 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(ms) 0
--8 0 10 -262144 -1 -1 2.66854e+06 256;
+-8 0 10 -262144 -1 -1 0 256;
 #X text 189 410 tag;
 #N canvas 190 125 603 538 play 0;
 #X obj 63 448 outlet;
@@ -97,9 +97,8 @@
 #X obj 427 457 out-mono;
 #X obj 100 179 upp.ms2s;
 #X obj 308 248 upp.ms2s;
-#X obj 35 452 upp 10 spat-mono \$0-bus syn-sample-varcorr \$0-wnd 1024
-;
 #X obj 440 295 wnd-lin \$0-wnd 1024;
+#X obj 35 452 upp 10 spat-mono \$0-bus syn-sample-varcorr \$0-wnd;
 #X connect 6 1 7 0;
 #X connect 7 0 17 0;
 #X connect 8 0 7 1;
@@ -116,13 +115,13 @@
 #X connect 21 0 22 0;
 #X connect 22 0 23 1;
 #X connect 23 0 24 0;
-#X connect 24 0 31 0;
-#X connect 25 0 31 1;
+#X connect 24 0 32 0;
+#X connect 25 0 32 1;
 #X connect 26 0 18 0;
 #X connect 26 1 23 0;
 #X connect 27 0 28 0;
 #X connect 29 0 20 2;
 #X connect 29 0 20 4;
 #X connect 30 0 6 1;
-#X connect 31 0 10 0;
-#X connect 31 2 11 0;
+#X connect 32 0 10 0;
+#X connect 32 2 11 0;

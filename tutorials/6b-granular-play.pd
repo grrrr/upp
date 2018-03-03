@@ -3,20 +3,20 @@
 #X text 399 268 half window for one grain;
 #X obj 96 347 moses;
 #X obj 144 347 spigot;
-#X obj 339 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 1
+#X obj 339 106 tgl 15 0 empty empty loop 17 7 0 10 -204786 -1 -1 0
 1;
 #X obj 473 455 out-mono;
 #X obj 327 180 sample \$0-sample;
 #X obj 35 452 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X floatatom 320 454 5 0 0 0 voices_active - -, f 5;
+#X floatatom 295 449 5 0 0 0 voices_active - -, f 5;
 #X obj 35 396 list prepend \$0-sample;
 #X obj 27 11 cnv 15 550 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
 #X obj 179 125 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 0.947748 256;
+-1 -1 0.913335 256;
 #X text 34 34 synchronous granular playing through audio buffer;
 #X obj 182 107 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
 -204786 -1 -1 8368 1;
@@ -27,7 +27,7 @@
 #X obj 100 129 / 2;
 #X msg 57 179 0;
 #X obj 35 289 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(samps)
-0 -8 0 10 -262144 -1 -1 273114 256;
+0 -8 0 10 -262144 -1 -1 0 256;
 #X text 182 397 tag;
 #N canvas 472 176 603 538 play 0;
 #X obj 63 448 outlet;
@@ -87,31 +87,31 @@
 #X obj 35 230 t a a;
 #X obj 399 287 wnd-lin \$0-wnd 1024;
 #X text 461 114 to find voice patch;
-#X obj 35 425 upp.xc 10 spat-mono \$0-bus syn-sample \$0-wnd 1024;
 #X obj 431 91 declare -path .. -path .;
 #X text 459 13 grrrr.org \, 2012-15;
 #X obj 93 179 upp.ms2s;
 #X obj 327 244 upp.ms2s;
+#X obj 35 425 upp.xc 10 spat-mono \$0-bus syn-sample \$0-wnd;
 #X connect 1 1 2 0;
 #X connect 2 0 18 0;
 #X connect 3 0 2 1;
-#X connect 5 0 29 0;
-#X connect 8 0 25 0;
+#X connect 5 0 28 0;
+#X connect 8 0 29 0;
 #X connect 10 0 21 0;
 #X connect 11 0 21 5;
 #X connect 13 0 11 0;
 #X connect 14 0 4 0;
-#X connect 15 0 25 1;
+#X connect 15 0 29 1;
 #X connect 16 0 17 0;
-#X connect 17 0 28 0;
+#X connect 17 0 27 0;
 #X connect 18 0 21 1;
 #X connect 19 0 1 0;
 #X connect 21 0 22 0;
 #X connect 21 1 15 0;
 #X connect 22 0 19 0;
 #X connect 22 1 8 0;
-#X connect 25 0 6 0;
-#X connect 25 2 7 0;
-#X connect 28 0 21 4;
-#X connect 28 0 21 2;
-#X connect 29 0 1 1;
+#X connect 27 0 21 4;
+#X connect 27 0 21 2;
+#X connect 28 0 1 1;
+#X connect 29 0 6 0;
+#X connect 29 2 7 0;

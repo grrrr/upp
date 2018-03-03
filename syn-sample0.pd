@@ -1,11 +1,11 @@
-#N canvas 857 97 453 340 10;
+#N canvas 45 101 453 340 10;
 #X obj 37 41 inlet;
 #X obj 89 302 outlet~;
 #X obj 37 79 list split 1;
 #X obj 52 124 cnv 15 120 150 empty empty play_sample 20 12 0 14 -233017
 -66577 0;
 #X obj 316 43 inlet;
-#X text 281 22 grrrr.org 2012;
+#X text 317 18 grrrr.org 2012;
 #X obj 316 295 outlet;
 #X obj 72 162 unpack 0 0 0;
 #X obj 91 281 *~ 0;

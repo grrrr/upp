@@ -1,4 +1,4 @@
-#N canvas 5 22 615 530 10;
+#N canvas 5 23 615 530 10;
 #X declare -path .. -path .;
 #X text 418 272 half window for one grain;
 #X obj 96 342 moses;
@@ -8,13 +8,13 @@
 #X obj 321 185 sample \$0-sample;
 #X obj 35 477 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
 -1 -1;
-#X floatatom 356 479 5 0 0 0 voices_active - -, f 5;
+#X floatatom 325 478 5 0 0 0 voices_active - -, f 5;
 #X obj 27 11 cnv 15 550 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
 #X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
 ;
 #X obj 179 125 nbx 5 14 -1 1 0 0 empty empty empty 0 -8 0 10 -204786
--1 -1 0.976378 256;
+-1 -1 0.968504 256;
 #X text 34 34 synchronous granular playing through audio buffer;
 #X obj 182 107 hsl 128 15 -1 1 0 1 empty empty speed -2 -8 0 10 -204786
 -1 -1 12550 1;
@@ -123,8 +123,7 @@
 #X obj 321 250 upp.ms2s;
 #X obj 94 177 upp.ms2s;
 #X obj 186 227 upp.ms2s;
-#X obj 35 452 upp 10 spat-mono \$0-bus syn-sample-varcorr \$0-wnd 1024
-;
+#X obj 35 452 upp 10 spat-mono \$0-bus syn-sample-varcorr \$0-wnd;
 #X connect 1 1 2 0;
 #X connect 2 0 14 0;
 #X connect 3 0 2 1;
