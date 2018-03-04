@@ -1,0 +1,20 @@
+#N canvas 566 273 461 373 10;
+#X obj 37 41 inlet;
+#X obj 72 302 outlet~;
+#X obj 37 87 list split 1;
+#X obj 52 124 cnv 15 120 150 empty empty play_sine 20 12 0 14 -233017
+-66577 0;
+#X obj 313 43 inlet;
+#X obj 316 298 outlet;
+#X obj 72 230 *~ 0;
+#X obj 72 193 osc~;
+#X obj 72 162 unpack 0 0;
+#X text 36 20 tag frq volume;
+#X text 317 18 grrrr.org 2018;
+#X connect 0 0 2 0;
+#X connect 2 1 8 0;
+#X connect 4 0 5 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 8 1 6 1;
