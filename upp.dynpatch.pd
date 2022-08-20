@@ -1,11 +1,9 @@
-#N canvas 756 469 610 339 10;
+#N canvas 27 40 610 339 10;
 #X obj 186 38 loadbang;
 #X text 184 288 explicit loadbang after everything has been set up
 ;
 #X obj 213 176 upp.dynchain;
 #X obj 186 232 f \$0;
-#N canvas 201 562 526 277 \$0-dynsub 0;
-#X restore 44 199 pd \$0-dynsub;
 #X msg 186 256 \; pd-\$1-dynsub loadbang;
 #X obj 351 196 outlet;
 #X obj 351 155 inlet;
@@ -15,10 +13,14 @@
 #X text 276 45 with no inlets and outlets;
 #X obj 186 70 t b b;
 #X obj 213 112 list append \$1 \$0-dynsub 0;
-#X connect 0 0 12 0;
-#X connect 2 1 6 0;
-#X connect 3 0 5 0;
-#X connect 7 0 2 1;
-#X connect 12 0 3 0;
-#X connect 12 1 13 0;
-#X connect 13 0 2 0;
+#X obj 30 195 cnv 15 120 25 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#N canvas 12 104 526 277 \$0-dynsub 0;
+#X restore 44 199 pd \$0-dynsub;
+#X connect 0 0 11 0;
+#X connect 2 1 5 0;
+#X connect 3 0 4 0;
+#X connect 6 0 2 1;
+#X connect 11 0 3 0;
+#X connect 11 1 12 0;
+#X connect 12 0 2 0;

@@ -1,4 +1,4 @@
-#N canvas 139 522 587 257 10;
+#N canvas 57 409 587 257 10;
 #X obj 69 38 inlet;
 #X obj 69 195 outlet;
 #X obj 142 195 outlet;
@@ -251,14 +251,16 @@
 #X restore 69 103 pd comm;
 #X msg 352 103 upp.comm UPP-\$2 \$1;
 #X text 475 23 grrrr.org 2012;
-#X obj 247 105 upp.dynpatch \$1;
+#X obj 227 102 cnv 15 120 25 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X obj 241 107 upp.dynpatch \$1;
 #X connect 0 0 12 0;
 #X connect 5 0 12 1;
-#X connect 10 0 15 0;
+#X connect 10 0 16 0;
 #X connect 11 0 13 0;
 #X connect 12 0 1 0;
 #X connect 12 1 2 0;
 #X connect 12 2 7 0;
 #X connect 13 0 10 0;
-#X connect 15 0 11 0;
+#X connect 16 0 11 0;
 #X coords 0 0 1 1 100 50 0;

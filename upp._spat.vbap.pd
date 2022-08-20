@@ -34,8 +34,6 @@
 #X text 289 140 dim;
 #X text 245 139 num;
 #X text 266 311 num speakers;
-#X text 48 15 Compute inverse distances to loudspeaker coordinates
-;
 #X text 49 43 azimuth elevation spread;
 #X obj 51 181 unpack 0 0 0;
 #X obj 51 293 vbap/vbap 0 0 0;
@@ -43,16 +41,17 @@
 #X obj 181 181 list prepend define_loudspeakers;
 #X obj 181 204 list trim;
 #X obj 232 87 t a a;
-#X connect 0 0 12 0;
-#X connect 2 0 17 0;
+#X text 48 15 Use VBAP external (seems unmaintained;
+#X connect 0 0 11 0;
+#X connect 2 0 16 0;
 #X connect 5 0 4 0;
-#X connect 12 0 14 0;
-#X connect 12 1 13 2;
-#X connect 12 2 13 3;
-#X connect 13 0 1 0;
-#X connect 14 0 13 0;
-#X connect 14 1 13 1;
-#X connect 15 0 16 0;
-#X connect 16 0 13 0;
-#X connect 17 0 15 0;
-#X connect 17 1 5 0;
+#X connect 11 0 13 0;
+#X connect 11 1 12 2;
+#X connect 11 2 12 3;
+#X connect 12 0 1 0;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
+#X connect 14 0 15 0;
+#X connect 15 0 12 0;
+#X connect 16 0 14 0;
+#X connect 16 1 5 0;

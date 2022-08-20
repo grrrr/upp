@@ -1,4 +1,4 @@
-#N canvas 37 46 615 525 10;
+#N canvas 321 68 615 525 10;
 #X declare -path .. -path .;
 #X text 418 279 half window for one grain;
 #X obj 96 321 moses;
@@ -11,21 +11,21 @@
 #X floatatom 350 478 5 0 0 0 voices_active - -, f 5;
 #X obj 27 11 cnv 15 550 40 empty empty Universal_Polyphonic_Player
 10 10 0 14 -233017 -66577 0;
-#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 0 1
+#X obj 35 108 tgl 25 0 empty empty play 0 -8 0 10 -258113 -1 -1 1 1
 ;
 #X obj 179 125 nbx 5 14 0.01 10 1 0 empty empty empty 0 -8 0 10 -204786
--1 -1 1.00018 256;
+-1 -1 1.00073 256;
 #X text 34 34 synchronous granular playing through audio buffer;
 #X obj 182 107 hsl 128 15 0.01 10 1 1 empty empty speed -2 -8 0 10
--204786 -1 -1 8467 1;
+-204786 -1 -1 8468 1;
 #X obj 100 109 nbx 5 14 1 1000 1 1 empty empty grain_length 0 -8 0
-10 -204786 -1 -1 50 256;
+10 -204786 -1 -1 10 256;
 #X obj 100 129 / 2;
 #X msg 57 180 0;
 #X obj 64 291 nbx 8 14 0 1e+37 0 0 empty empty pos_in_buffer_(smps)
-0 -8 0 10 -262144 -1 -1 91524.1 256;
+0 -8 0 10 -262144 -1 -1 1.34824e+06 256;
 #X text 189 410 tag;
-#N canvas 229 109 603 538 play 0;
+#N canvas 296 129 603 538 play 0;
 #X obj 92 473 outlet;
 #X text 257 150 attack+sustain;
 #X obj 63 60 inlet;
@@ -51,13 +51,13 @@
 #X obj 164 341 +;
 #X obj 63 276 upp.onward;
 #X obj 73 103 sel 0;
-#X obj 92 436 pack 0 0 0;
-#X msg 409 382 0;
+#X obj 92 451 pack 0 0 0;
+#X msg 409 348 0;
 #X obj 409 451 pack 0 0;
 #X obj 63 322 f;
 #X obj 409 406 t b a;
 #X obj 409 429 f;
-#X obj 92 415 f;
+#X obj 92 430 f;
 #X text 90 507 attack(ms) delay(samples) playpos(ms);
 #X text 407 509 release(ms) delay(samples);
 #X obj 63 364 t b a a;
@@ -100,7 +100,6 @@
 #X obj 35 411 list prepend \$0-sample;
 #X obj 453 299 wnd-lin \$0-wnd 1024;
 #X obj 241 412 list prepend \$0-sample;
-#X obj 35 225 t a a;
 #X obj 427 431 catch~ \$0-bus;
 #X obj 427 457 out-mono;
 #X obj 35 249 unpack 0 0 0;
@@ -111,36 +110,33 @@
 #X obj 96 179 upp.ms2s;
 #X obj 35 384 list append 1;
 #X text 121 385 volume;
-#X obj 84 433 print ON;
-#X obj 323 434 print OFF;
 #X obj 35 453 upp 10 spat-mono \$0-bus tcenv \$0-wnd syn-sample0;
+#X obj 35 225 t a a b;
 #X connect 1 1 2 0;
 #X connect 2 0 14 0;
 #X connect 3 0 2 1;
-#X connect 4 0 31 0;
+#X connect 4 0 30 0;
 #X connect 8 0 17 0;
 #X connect 9 0 17 5;
 #X connect 11 0 9 0;
 #X connect 12 0 13 0;
-#X connect 13 0 32 0;
+#X connect 13 0 31 0;
 #X connect 14 0 17 1;
 #X connect 15 0 1 0;
-#X connect 17 0 24 0;
+#X connect 17 0 35 0;
 #X connect 17 1 23 0;
 #X connect 18 0 19 0;
 #X connect 19 0 20 1;
-#X connect 20 0 33 0;
-#X connect 21 0 35 0;
-#X connect 21 0 37 0;
-#X connect 23 0 36 0;
-#X connect 23 0 37 1;
-#X connect 24 0 27 0;
-#X connect 24 1 20 0;
-#X connect 25 0 26 0;
-#X connect 27 2 15 0;
-#X connect 31 0 1 1;
-#X connect 32 0 17 4;
-#X connect 32 0 17 2;
-#X connect 33 0 21 0;
-#X connect 37 0 5 0;
-#X connect 37 2 6 0;
+#X connect 20 0 32 0;
+#X connect 21 0 34 0;
+#X connect 23 0 34 1;
+#X connect 24 0 25 0;
+#X connect 26 2 15 0;
+#X connect 30 0 1 1;
+#X connect 31 0 17 4;
+#X connect 31 0 17 2;
+#X connect 32 0 21 0;
+#X connect 34 0 5 0;
+#X connect 34 2 6 0;
+#X connect 35 0 26 0;
+#X connect 35 1 20 0;

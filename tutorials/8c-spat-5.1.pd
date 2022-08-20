@@ -1,25 +1,24 @@
-#N canvas 99 83 677 513 10;
-#X declare -path .. -path .;
-#X obj 39 480 bng 15 250 50 0 empty empty overflow 17 7 0 10 -262144
--1 -1;
-#X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 -257985
--1 -1 0 1;
+#N canvas 304 239 677 513 10;
+#X declare -path .. -path . -lib vbap;
+#X obj 39 480 bng 15 250 50 0 empty empty overflow 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 42 95 hsl 250 30 0 1 0 0 empty empty scrub -2 -8 0 10 #f8fc00
+#000000 #000000 0 1;
 #X obj 39 167 *;
 #X text 161 264 attack sustain decay;
 #X text 474 244 half window for one grain;
-#X floatatom 112 223 5 0 0 0 - - -, f 5;
+#X floatatom 112 223 5 0 0 0 - - - 0;
 #X text 299 102 0...1;
 #X obj 39 188 nbx 10 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+#fcfcfc #000000 #000000 0 256;
 #X obj 381 154 sample \$0-sample;
 #X obj 39 415 list prepend \$0-sample;
 #X obj 27 11 cnv 15 600 40 empty empty Universal_Polyphonic_Player
-10 10 0 14 -233017 -66577 0;
-#X floatatom 329 480 5 0 0 0 voices_active - -, f 5;
+10 10 0 14 #e0e0e0 #404040 0;
+#X floatatom 329 480 5 0 0 0 voices_active - - 0;
 #X obj 511 262 wnd-sin \$0-wnd 1024;
 #X obj 39 312 t a b;
-#X text 510 103 to find voice patch;
-#X obj 480 83 declare -path .. -path .;
+#X text 411 106 to find voice patch;
 #X obj 382 219 upp.ms2s;
 #X text 137 187 position in buffer(smps);
 #X text 155 222 change attack+decay (ms);
@@ -41,7 +40,7 @@
 #X connect 5 0 4 0;
 #X connect 5 0 1 0;
 #X restore 108 311 pd running angle;
-#X floatatom 108 334 5 0 0 0 - - -, f 5;
+#X floatatom 108 334 5 0 0 0 - - - 0;
 #X obj 108 353 pack 0 0 0.5;
 #X obj 39 375 list prepend;
 #X text 377 310 Dolby-5.1 loudspeaker arrangement;
@@ -51,27 +50,28 @@
 #X text 378 379 3 Rear-left \, 4 Rear-right \, 5 Center;
 #X text 34 34 granular scrubbing with surround spatialization;
 #X text 178 416 the sample name is also the tag;
-#X text 526 15 grrrr.org \, 2016;
 #X obj 490 432 out-multi \$0-bus 5;
 #X msg 64 334 1;
 #X text 144 333 azimuth in degrees;
 #X obj 39 456 upp 20 spat-vbap vbap-5.1 \$0-bus syn-grain \$0-wnd;
+#X text 526 15 grrrr.org \, 2022;
+#X obj 381 86 declare -path .. -path . -lib vbap;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
-#X connect 5 0 20 0;
-#X connect 7 0 19 0;
-#X connect 8 0 16 0;
-#X connect 9 0 37 0;
-#X connect 13 0 25 0;
-#X connect 13 1 35 0;
-#X connect 16 0 2 1;
-#X connect 19 0 13 0;
-#X connect 20 0 19 3;
-#X connect 20 0 19 1;
+#X connect 5 0 19 0;
+#X connect 7 0 18 0;
+#X connect 8 0 15 0;
+#X connect 9 0 35 0;
+#X connect 13 0 24 0;
+#X connect 13 1 33 0;
+#X connect 15 0 2 1;
+#X connect 18 0 13 0;
+#X connect 19 0 18 3;
+#X connect 19 0 18 1;
+#X connect 21 0 22 0;
 #X connect 22 0 23 0;
-#X connect 23 0 24 0;
-#X connect 24 0 25 1;
-#X connect 25 0 9 0;
-#X connect 35 0 22 0;
-#X connect 37 0 0 0;
-#X connect 37 2 11 0;
+#X connect 23 0 24 1;
+#X connect 24 0 9 0;
+#X connect 33 0 21 0;
+#X connect 35 0 0 0;
+#X connect 35 2 11 0;

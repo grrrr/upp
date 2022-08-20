@@ -1,4 +1,4 @@
-(c) 2012-15 grrrr.org
+(c) 2012-22 grrrr.org
 http://grrrr.org/research/software/upp/
 
 License: CC-BY-SA
