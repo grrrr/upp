@@ -9,7 +9,7 @@ package_pd_deken:
   stage: package
   script:
     - mkdir -p build/$CI_PROJECT_NAME
-    - cp readme.txt license.txt $CI_PROJECT_DIR/*.pd || true
+    - cp -r tutorials readme.txt license.txt $CI_PROJECT_DIR/*.pd build/$CI_PROJECT_NAME || true
     - deken package build/$CI_PROJECT_NAME --version `cat version.txt`
   artifacts:
     paths:
